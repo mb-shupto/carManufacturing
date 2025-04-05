@@ -8,11 +8,9 @@ import java.io.IOException;
 import java.util.List;
 
 public class LoginController {
-
-    private List<User> userList;
-    @javafx.fxml.FXML
-    private ComboBox<User> userComboBox;
-    @javafx.fxml.FXML
+    @FXML
+    private ComboBox<String> userComboBox;
+    @FXML
     private PasswordField passwordField;
     @javafx.fxml.FXML
     private Label messageLabel;
