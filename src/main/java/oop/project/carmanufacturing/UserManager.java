@@ -8,8 +8,8 @@ public class UserManager {
 
     public UserManager() {
         if (userList.isEmpty()) {
-            userList.add(new User("test", "1234"));
-            userList.add(new User("admin", "1234"));
+            userList.add(new User("Production Manager", "1234"));
+            userList.add(new User("QA Engineer", "1234"));
         }
     }
 
