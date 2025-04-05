@@ -8,10 +8,8 @@ public class UserManager {
 
     public UserManager() {
         if (userList.isEmpty()) {
-            userList.add(new User("asif", "1234", 50));
-            userList.add(new User("test", "1234", 20));
-            userList.add(new User("admin", "1234", 30));
-            userList.add(new User("cis101", "cis101", 100));
+            userList.add(new User("test", "1234"));
+            userList.add(new User("admin", "1234"));
         }
     }
 
