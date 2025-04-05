@@ -19,8 +19,8 @@ public class LoginController {
 
     @FXML
     public void initialize() {
-        UserManager manager = new UserManager();
-        userList = manager.getUserList();
+        // putting items on the combo box
+        userComboBox.getItems().addAll(userManager.getAllUsernames());
     }
 
     @FXML
