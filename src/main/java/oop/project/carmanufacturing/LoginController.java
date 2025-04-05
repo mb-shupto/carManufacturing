@@ -15,7 +15,9 @@ public class LoginController {
     @javafx.fxml.FXML
     private Label messageLabel;
 
-    @javafx.fxml.FXML
+    private UserManager userManager = new UserManager();
+
+    @FXML
     public void initialize() {
         UserManager manager = new UserManager();
         userList = manager.getUserList();
