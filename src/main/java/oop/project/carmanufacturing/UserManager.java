@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserManager {
-    private final List<User> users = Arrays.asList(
+    private List<User> users = Arrays.asList(
             new User("Production Manager", "1234"),
             new User("QA Engineer", "5678")
     );
