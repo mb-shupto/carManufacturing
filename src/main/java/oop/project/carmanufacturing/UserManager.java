@@ -6,7 +6,7 @@ import java.util.List;
 public class UserManager {
     private List<User> users = Arrays.asList(
             new User("Production Manager", "1234"),
-            new User("QA Engineer", "5678")
+            new User("QA Engineer", "1122")
     );
 
     // Check if username and password match any user
