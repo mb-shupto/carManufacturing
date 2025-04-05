@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserManager {
-    private static List<User> userList = new ArrayList<>();;
+    private final List<User> users = Arrays.asList(
+            new User("Production Manager", "1234"),
+            new User("QA Engineer", "5678"),
+            new User("Inventory Clerk", "0000")
+    );
 
     public UserManager() {
         if (userList.isEmpty()) {
