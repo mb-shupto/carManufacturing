@@ -10,10 +10,13 @@ public class UserManager {
             new User("Inventory Clerk", "0000")
     );
 
-    public UserManager() {
-        if (userList.isEmpty()) {
-            userList.add(new User("Production Manager", "1234"));
-            userList.add(new User("QA Engineer", "1234"));
+    // Check if username and password match any user
+    public boolean validateLogin(String username, String password) {
+        for (User user : users) {
+            if (user.getUser().equals(username) &&
+                    user.getPassword().equals(password)) {
+                return true;
+            }
         }
     }
 
