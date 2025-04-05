@@ -13,7 +13,12 @@ public class UserManager {
         }
     }
 
-    public List<User> getUserList() {
-        return userList;
+    // Get all usernames for the dropdown
+    public String[] getAllUsernames() {
+        String[] usernames = new String[users.size()];
+        for (int i = 0; i < users.size(); i++) {
+            usernames[i] = users.get(i).getUser();
+        }
+        return usernames;
     }
 }
