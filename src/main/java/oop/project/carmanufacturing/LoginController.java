@@ -23,14 +23,15 @@ public class LoginController {
         userList = manager.getUserList();
     }
 
-    @javafx.fxml.FXML
-    public void login(ActionEvent actionEvent) throws IOException {
-        for (User u: userList) {
-            if (userComboBox.getItems().equals(u.getUsername())
-                    && passwordField.getText().equals(u.getPassword())) {
-                messageLabel.setText("Log in successful!");
-            }
+    @FXML
+    public void login() {
+        String username = userComboBox.getValue();
+        String password = passwordField.getText();
+
+        if (userManager.validateLogin(username, password)) {
+            messageLabel.setText("Login successful!");
+        } else {
+            messageLabel.setText("Invalid credentials!");
         }
-        messageLabel.setText("Invalid username or password!");
     }
 }
