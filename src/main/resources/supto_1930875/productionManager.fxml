@@ -11,4 +11,16 @@
             fx:controller="oop.project.carmanufacturing.Supto_1930875.ProductionManager"
             prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="525.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.project.carmanufacturing.Supto_1930875.ProductionManager">
+   <children>
+      <Label layoutX="21.0" layoutY="25.0" prefHeight="46.0" prefWidth="334.0" text="Production Manager Dashboard">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="92.0" mnemonicParsing="false" onAction="#showScheduleTasks" prefHeight="26.0" prefWidth="171.0" text="Schedule a Task" />
+      <Button layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#showMonitorProgress" prefHeight="26.0" prefWidth="171.0" text="Monitor Progress" />
+      <Button layoutX="14.0" layoutY="172.0" mnemonicParsing="false" onAction="#showAssignShifts" prefHeight="26.0" prefWidth="171.0" text="Assign Shifts" />
+      <Button layoutX="14.0" layoutY="214.0" mnemonicParsing="false" onAction="#showGenerateReport" prefHeight="26.0" prefWidth="171.0" text="Generate Report" />
+   </children>
 </AnchorPane>
