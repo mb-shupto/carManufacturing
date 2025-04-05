@@ -18,6 +18,7 @@ public class UserManager {
                 return true;
             }
         }
+        return false;
     }
 
     // Get all usernames for the dropdown
