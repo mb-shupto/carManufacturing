@@ -5,4 +5,12 @@ module oop.project.carmanufacturing {
 
     opens oop.project.carmanufacturing to javafx.fxml;
     exports oop.project.carmanufacturing;
+    exports;
+    opens to
+    exports;
+    opens to
+    exports;
+    opens to
+    exports;
+    opens to
 }

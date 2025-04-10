@@ -1,5 +1,3 @@
-package oop.project.carmanufacturing;
-
 public class User {
     private String user;
     private String password;
