@@ -10,18 +10,22 @@
 
 <AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.ScheduletaskController">
    <children>
-      <Label layoutX="264.0" layoutY="29.0" text="Schedule Task">
+      <Label layoutX="213.0" layoutY="89.0" prefHeight="44.0" prefWidth="180.0" text="Schedule Task" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="130.0" layoutY="129.0" text="Pick a Task:" />
-      <Label layoutX="120.0" layoutY="175.0" text="Assign Worker:" />
-      <Label layoutX="125.0" layoutY="226.0" text="Set Deadline:" />
-      <ComboBox fx:id="pickTaskComboBox" layoutX="240.0" layoutY="125.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a task" />
-      <ComboBox fx:id="assignWorkerComboBox" layoutX="240.0" layoutY="170.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a worker group" />
-      <DatePicker fx:id="deadLineDatePicker" layoutX="233.0" layoutY="222.0" prefHeight="26.0" prefWidth="222.0" promptText="(Deadline)" />
-      <Button fx:id="assignTaskOnAction" layoutX="264.0" layoutY="316.0" mnemonicParsing="false" text="Assign Task" />
-      <Label fx:id="outputLabel" layoutX="495.0" layoutY="69.0" prefHeight="18.0" prefWidth="151.0" />
+      <Label layoutX="141.0" layoutY="180.0" text="Pick a Task:" />
+      <Label layoutX="131.0" layoutY="226.0" text="Assign Worker:" />
+      <Label layoutX="136.0" layoutY="277.0" text="Set Deadline:" />
+      <ComboBox fx:id="pickTaskComboBox" layoutX="251.0" layoutY="176.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a task" />
+      <ComboBox fx:id="assignWorkerComboBox" layoutX="251.0" layoutY="221.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a worker group" />
+      <DatePicker fx:id="deadLineDatePicker" layoutX="244.0" layoutY="273.0" prefHeight="26.0" prefWidth="222.0" promptText="(Deadline)" />
+      <Button layoutX="264.0" layoutY="353.0" mnemonicParsing="false" onAction="#assignTaskOnAction" text="Assign Task" />
+      <Label fx:id="outputLabel" layoutX="417.0" layoutY="14.0" prefHeight="26.0" prefWidth="238.0" textFill="#a95353">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
