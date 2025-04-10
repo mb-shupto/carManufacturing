@@ -20,5 +20,7 @@ public class ScheduletaskController
 
     @javafx.fxml.FXML
     public void initialize() {
+        assignWorkerComboBox.getItems().setAll("Team-1","Team-2", "Team-3", "Team-4", "Team-5" );
+        pickTaskComboBox.getItems().setAll("Assemble Engine", "Attach Suspension", "Paint Body", "Add Wheel", "Test Battery");
     }
 }
