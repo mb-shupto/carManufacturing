@@ -5,21 +5,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="oop.project.carmanufacturing.Supto_1930875.ProductionManager"
-            prefHeight="400.0" prefWidth="600.0">
-
-<AnchorPane prefHeight="525.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.project.carmanufacturing.Supto_1930875.ProductionManager">
+<AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.ProductionManagerController">
    <children>
-      <Label layoutX="21.0" layoutY="25.0" prefHeight="46.0" prefWidth="334.0" text="Production Manager Dashboard">
+      <Label layoutX="206.0" layoutY="26.0" text="Production Manager Dashboard">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="14.0" layoutY="92.0" mnemonicParsing="false" onAction="#showScheduleTasks" prefHeight="26.0" prefWidth="171.0" text="Schedule a Task" />
-      <Button layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#showMonitorProgress" prefHeight="26.0" prefWidth="171.0" text="Monitor Progress" />
-      <Button layoutX="14.0" layoutY="172.0" mnemonicParsing="false" onAction="#showAssignShifts" prefHeight="26.0" prefWidth="171.0" text="Assign Shifts" />
-      <Button layoutX="14.0" layoutY="214.0" mnemonicParsing="false" onAction="#showGenerateReport" prefHeight="26.0" prefWidth="171.0" text="Generate Report" />
+      <Button layoutX="14.0" layoutY="105.0" mnemonicParsing="false" onAction="#scheduleTaskOnAction" prefHeight="26.0" prefWidth="166.0" text="Schedule Task" />
+      <Button layoutX="14.0" layoutY="153.0" mnemonicParsing="false" onAction="#monitorTaskOnAction" prefHeight="26.0" prefWidth="166.0" text="Monitor Task" />
+      <Button layoutX="14.0" layoutY="200.0" mnemonicParsing="false" onAction="#assignShiftsOnAction" prefHeight="26.0" prefWidth="166.0" text="Assign Shifts" />
+      <Button layoutX="14.0" layoutY="248.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="26.0" prefWidth="166.0" text="Generate Report" />
+      <Button layoutX="535.0" layoutY="453.0" mnemonicParsing="false" onAction="#logOutOnAction" text="Log Out" />
+      <Button layoutX="482.0" layoutY="106.0" mnemonicParsing="false" onAction="#orderMaterialsOnAction" prefHeight="26.0" prefWidth="166.0" text="Order Raw Materials" />
+      <Button layoutX="482.0" layoutY="154.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Button" />
+      <Button layoutX="482.0" layoutY="201.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Button" />
+      <Button layoutX="482.0" layoutY="249.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Button" />
    </children>
 </AnchorPane>

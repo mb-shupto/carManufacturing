@@ -1,3 +1,5 @@
+package common;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -5,7 +7,7 @@ import javafx.scene.control.PasswordField;
 
 public class LoginController {
     @FXML
-    private ComboBox<String> userComboBox;
+    public ComboBox<String> userComboBox;
     @FXML
     private PasswordField passwordField;
     @FXML

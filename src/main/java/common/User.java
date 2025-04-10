@@ -1,3 +1,5 @@
+package common;
+
 public class User {
     private String user;
     private String password;
@@ -25,7 +27,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "common.User{" +
                 "user='" + user + '\'' +
                 ", password='" + password + '\'' +
                 '}';
