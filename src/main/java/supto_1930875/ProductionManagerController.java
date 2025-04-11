@@ -16,8 +16,8 @@ public class ProductionManagerController {
     public void scheduleTaskOnAction(ActionEvent actionEvent) throws IOException {
             try {
                 // Load the FXML
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/supto_1930875/scheduleTask.fxml"));
-                Parent root = loader.load();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/scheduleTask.fxml"));
+                Parent root = fxmlLoader.load();
 
                 // Get the current stage properly
                 Node source = (Node) actionEvent.getSource();
@@ -32,7 +32,6 @@ public class ProductionManagerController {
                 // Show error to user if needed
             }
         }
-
 
     @javafx.fxml.FXML
     public void monitorTaskOnAction(ActionEvent actionEvent) throws IOException {
