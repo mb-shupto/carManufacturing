@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hasibul_2321368.MonitorMachinePerformanceView">
+   <children>
+      <Label layoutX="367.0" layoutY="28.0" text="Monitor Machine Performance">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView layoutX="13.0" layoutY="473.0" prefHeight="200.0" prefWidth="1116.0">
+        <columns>
+          <TableColumn fx:id="MachineIDTableColumn" prefWidth="125.88681221008301" text="Machine ID" />
+          <TableColumn fx:id="MachineStatusTableColumn" minWidth="0.0" prefWidth="121.35847473144531" text="Machine Status" />
+            <TableColumn fx:id="LastMaintenanceDateTableColumn" minWidth="0.0" prefWidth="177.5093994140625" text="Last Maintenance Date" />
+            <TableColumn fx:id="NextMaintenanceDueTableColumn" minWidth="0.0" prefWidth="173.88677978515625" text="Next Maintenance Due" />
+            <TableColumn fx:id="MachineDetailsTableColumn" minWidth="0.0" prefWidth="125.88677978515625" text="Machine Details" />
+            <TableColumn fx:id="ScoreTableColumn" minWidth="0.0" prefWidth="54.339599609375" text="Score" />
+            <TableColumn fx:id="TechnicianAssignTableColumn" minWidth="0.0" prefWidth="134.943603515625" text="Technician Assign" />
+            <TableColumn fx:id="MaintenanceTaskStatusTableColumn" minWidth="0.0" prefWidth="198.3394775390625" text="Maintenance Task Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="GenerateButton" layoutX="628.0" layoutY="383.0" mnemonicParsing="false" onAction="#GenerateButtonOnAction" text="Generate" />
+      <Label layoutX="130.0" layoutY="93.0" text="Machine ID" />
+      <TextField fx:id="MachineIDTextField" layoutX="241.0" layoutY="87.0" />
+      <Label layoutX="130.0" layoutY="137.0" text="Machine Status" />
+      <TextField fx:id="MachineStatusTextField" layoutX="242.0" layoutY="131.0" />
+      <Label layoutX="129.0" layoutY="190.0" text="Last Maintenance Date" />
+      <DatePicker fx:id="LastMaintenanceDateDatePicker" layoutX="307.0" layoutY="185.0" />
+      <Label layoutX="125.0" layoutY="239.0" text="Next Maintenance Due" />
+      <DatePicker fx:id="NextMaintenanceDueDatePicker" layoutX="307.0" layoutY="234.0" />
+      <RadioButton fx:id="GoodRadioButton" layoutX="564.0" layoutY="296.0" mnemonicParsing="false" text="Good" />
+      <Label layoutX="446.0" layoutY="296.0" text="Health Score" />
+      <RadioButton fx:id="FairRadioButton" layoutX="647.0" layoutY="296.0" mnemonicParsing="false" text="Fair" />
+      <RadioButton fx:id="PoorRadioButton" layoutX="715.0" layoutY="296.0" mnemonicParsing="false" text="Poor" />
+      <Label layoutX="123.0" layoutY="354.0" text="Machine Details" />
+      <TextField fx:id="MachineDetailsTextField" layoutX="255.0" layoutY="349.0" />
+      <Label layoutX="669.0" layoutY="105.0" text="Technician Assignment" />
+      <ComboBox fx:id="TechnicianAssignmentComboBox" layoutX="833.0" layoutY="100.0" prefHeight="34.0" prefWidth="165.0" promptText="Enter Technician" />
+      <Label layoutX="669.0" layoutY="207.0" text="Maintenance Task Status" />
+      <ComboBox fx:id="MaintenanceTaskStatusComboBox" layoutX="854.0" layoutY="201.0" prefHeight="34.0" prefWidth="177.0" promptText="Enter Task Status" />
+   </children>
+</AnchorPane>

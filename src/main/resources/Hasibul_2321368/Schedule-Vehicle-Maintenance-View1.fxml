@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hasibul_2321368.Schedule-Vehicle-Maintenance-View1">
+   <children>
+      <TableView layoutX="30.0" layoutY="529.0" prefHeight="245.0" prefWidth="1087.0">
+         <columns>
+            <TableColumn fx:id="RequestIDTableColumn" prefWidth="98.71698188781738" text="Request ID" />
+            <TableColumn fx:id="VehicleIDTableColumn" prefWidth="86.94338989257812" text="Vehicle ID" />
+            <TableColumn fx:id="IssueDescriptionTableColumn" prefWidth="187.47169494628906" text="Issue Description" />
+            <TableColumn fx:id="TechnicianAssignTableColumn" prefWidth="155.7735595703125" text="Technician Assign" />
+            <TableColumn fx:id="DeleveryDateTableColumn" prefWidth="162.11322021484375" text="Vehicle Information" />
+            <TableColumn fx:id="RequestDateTableColumn" prefWidth="124.9810791015625" text="Request Date" />
+            <TableColumn fx:id="ScheduledDateTableColumn" prefWidth="130.4151611328125" text="Scheduled Date" />
+            <TableColumn fx:id="TaskStatusTableColumn" prefWidth="136.754638671875" text="Task Status" />
+         </columns>
+      </TableView>
+      <Label layoutX="237.0" layoutY="97.0" text="Request ID" />
+      <TextField fx:id="RequestIDTextField" layoutX="325.0" layoutY="91.0" />
+      <Label layoutX="236.0" layoutY="153.0" text="Vehicle Id" />
+      <TextField fx:id="VehicleIdTextField" layoutX="324.0" layoutY="147.0" />
+      <Label layoutX="168.0" layoutY="271.0" text="Technician Assigned" />
+      <ComboBox fx:id="TechnicianAssignedComboBox" layoutX="325.0" layoutY="266.0" prefHeight="34.0" prefWidth="171.0" promptText="Select Technician" />
+      <DatePicker fx:id="RequestDateDatePicker" layoutX="573.0" layoutY="91.0" promptText="Request Date" />
+      <DatePicker fx:id="ScheduledDateDatePicker" layoutX="573.0" layoutY="147.0" promptText="Scheduled Date" />
+      <Button fx:id="ConfirmButton" layoutX="631.0" layoutY="268.0" mnemonicParsing="false" onAction="#ConfirmButtonOnAction" prefHeight="34.0" prefWidth="203.0" text="Confirm" />
+      <Button fx:id="CancelButton" layoutX="631.0" layoutY="326.0" mnemonicParsing="false" onAction="#CancelButtonOnAction" prefHeight="34.0" prefWidth="203.0" text="Cancel" />
+      <Label layoutX="359.0" layoutY="24.0" prefHeight="55.0" prefWidth="382.0" text="Schedule Vehicle Maintenance">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="212.0" text="Issue Description" />
+      <TextField fx:id="IssueDescriptionTextField" layoutX="324.0" layoutY="207.0" />
+      <Label layoutX="570.0" layoutY="223.0" text="Task Status" />
+      <Label layoutX="169.0" layoutY="348.0" text="Vehicle Information" />
+      <TextField fx:id="VehicleInformationTextField" layoutX="330.0" layoutY="343.0" />
+      <CheckBox fx:id="SparePartsVerificationCheckBox" layoutX="332.0" layoutY="398.0" mnemonicParsing="false" text="Spare Parts Verification" />
+      <ComboBox fx:id="TaskStatusComboBox" layoutX="655.0" layoutY="218.0" prefHeight="34.0" prefWidth="187.0" promptText="Select Task Status" />
+      <Label layoutX="862.0" layoutY="204.0" prefHeight="63.0" prefWidth="187.0" text="Scheduled&quot;, &quot;In Progress&quot;, &quot;Completed&quot;" wrapText="true" />
+   </children>
+</AnchorPane>
