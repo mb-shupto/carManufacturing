@@ -2,7 +2,8 @@ module oop.project.carmanufacturing {
     requires javafx.controls;
     requires javafx.fxml;
 
+    opens common to javafx.fxml;
+    opens supto_1930875 to javafx.fxml;
 
-    opens oop.project.carmanufacturing to javafx.fxml;
-    exports oop.project.carmanufacturing;
+    exports common;
 }

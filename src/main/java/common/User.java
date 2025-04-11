@@ -1,4 +1,4 @@
-package oop.project.carmanufacturing;
+package common;
 
 public class User {
     private String user;
@@ -27,7 +27,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "common.User{" +
                 "user='" + user + '\'' +
                 ", password='" + password + '\'' +
                 '}';
