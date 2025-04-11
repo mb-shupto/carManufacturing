@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.ScheduletaskController">
    <children>
-      <Label layoutX="213.0" layoutY="89.0" prefHeight="44.0" prefWidth="180.0" text="Schedule Task" textAlignment="CENTER">
+      <Label layoutX="272.0" layoutY="75.0" prefHeight="44.0" prefWidth="180.0" text="Schedule Task" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
