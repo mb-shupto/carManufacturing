@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.xml.transform.Source;
 import java.io.IOException;
 
 public class ProductionManagerController {
@@ -74,6 +75,17 @@ public class ProductionManagerController {
     }
 
     @javafx.fxml.FXML
-    public void orderMaterialsOnAction(ActionEvent actionEvent) {
+    public void orderMaterialsOnAction (ActionEvent actionEvent) throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/orderMaterial.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Order Material Dashboard");
+            stage.show();
+        }catch (IOException exception){
+            exception.printStackTrace();
+        }
     }
 }
