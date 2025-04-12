@@ -18,7 +18,7 @@
       <Label layoutX="131.0" layoutY="226.0" text="Assign Worker:" />
       <Label layoutX="136.0" layoutY="277.0" text="Set Deadline:" />
       <ComboBox fx:id="pickTaskComboBox" layoutX="251.0" layoutY="176.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a task" />
-      <ComboBox fx:id="assignWorkerComboBox" layoutX="251.0" layoutY="221.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a worker group" />
+      <ComboBox fx:id="assignWorkerComboBox" layoutX="251.0" layoutY="221.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a worker team" />
       <DatePicker fx:id="deadLineDatePicker" layoutX="244.0" layoutY="273.0" prefHeight="26.0" prefWidth="222.0" promptText="(Deadline)" />
       <Button layoutX="264.0" layoutY="353.0" mnemonicParsing="false" onAction="#assignTaskOnAction" text="Assign Task" />
       <Label fx:id="outputLabel" layoutX="417.0" layoutY="14.0" prefHeight="26.0" prefWidth="238.0" textFill="#a95353">
