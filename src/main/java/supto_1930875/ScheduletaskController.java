@@ -33,13 +33,7 @@ public class ScheduletaskController
 
     @javafx.fxml.FXML
     public void assignTaskOnAction(ActionEvent actionEvent) {
-
-
-        if (assignWorkerComboBox.getValue()==null){
-            outputLabel.setText("Must select a team to continue!");
-            return;
-        }
-
+        
         if (pickTaskComboBox.getValue()==null){
             outputLabel.setText("Must select a task to continue!");
             return;
