@@ -45,6 +45,10 @@ public class ScheduletaskController
             return;
         }
 
+        if (assignWorkerComboBox.getValue()==null){
+            outputLabel.setText("Must select a team to continue!");
+            return;
+        }
         if (deadLineDatePicker.getValue()==null){
             outputLabel.setText("Must select a valid date!");
             return;
