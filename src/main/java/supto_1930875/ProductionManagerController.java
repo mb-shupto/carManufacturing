@@ -56,6 +56,19 @@ public class ProductionManagerController {
 
     @javafx.fxml.FXML
     public void generateReportOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/generateReport.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Monitor Task");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
     }
 
     @javafx.fxml.FXML
