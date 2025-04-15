@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="481.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="anamika_2220139.inventoryManagerController">
+   <children>
+      <Label layoutX="339.0" layoutY="79.0" text="Inventory Manager" />
+      <Button layoutX="138.0" layoutY="160.0" mnemonicParsing="false" onAction="#updateInventoryOnAction" text="Update Inventory level" />
+      <Button layoutX="138.0" layoutY="216.0" mnemonicParsing="false" text="Generate Report" />
+      <Button layoutX="138.0" layoutY="264.0" mnemonicParsing="false" text="Manage Defective Parts" />
+      <Button layoutX="138.0" layoutY="316.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="462.0" layoutY="148.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="462.0" layoutY="204.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="462.0" layoutY="264.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="462.0" layoutY="316.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="676.0" layoutY="406.0" mnemonicParsing="false" onAction="#backOnAction" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,5 @@
+Defect rates by assembly stage (e.g., welding, painting).
+Number of units requiring rework.
+Common defect types (e.g., misaligned parts, paint imperfections).
+Compliance with regulatory standards.
+Recommendations for process improvements.

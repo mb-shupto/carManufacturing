@@ -16,8 +16,8 @@ public class ProductionManagerController {
     public void scheduleTaskOnAction(ActionEvent actionEvent) throws IOException {
             try {
                 // Load the FXML
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/supto_1930875/scheduleTask.fxml"));
-                Parent root = loader.load();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/scheduleTask.fxml"));
+                Parent root = fxmlLoader.load();
 
                 // Get the current stage properly
                 Node source = (Node) actionEvent.getSource();
@@ -33,9 +33,20 @@ public class ProductionManagerController {
             }
         }
 
-
     @javafx.fxml.FXML
-    public void monitorTaskOnAction(ActionEvent actionEvent) {
+    public void monitorTaskOnAction(ActionEvent actionEvent) throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/monitorProgress.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Monitor Task");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
     }
 
     @javafx.fxml.FXML
@@ -44,13 +55,49 @@ public class ProductionManagerController {
 
     @javafx.fxml.FXML
     public void generateReportOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/generateReport.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Monitor Task");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
     }
 
     @javafx.fxml.FXML
     public void logOutOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/login.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Login Dashboard");
+            stage.show();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     @javafx.fxml.FXML
-    public void orderMaterialsOnAction(ActionEvent actionEvent) {
+    public void orderMaterialsOnAction (ActionEvent actionEvent) throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/orderMaterial.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Order Material Dashboard");
+            stage.show();
+        }catch (IOException exception){
+            exception.printStackTrace();
+        }
     }
 }
