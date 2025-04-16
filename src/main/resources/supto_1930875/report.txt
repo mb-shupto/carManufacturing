@@ -3,3 +3,14 @@ Number of units requiring rework.
 Common defect types (e.g., misaligned parts, paint imperfections).
 Compliance with regulatory standards.
 Recommendations for process improvements.
+
+
+Report Type: Daily Production Report
+
+Date: April 16, 2025
+Target: 100 cars
+Produced: 95 cars
+Morning Shift: 32 cars, no issues
+Afternoon Shift: 30 cars, 1-hour delay due to conveyor belt issue
+Night Shift: 33 cars, fully operational
+Notes: Need to schedule maintenance for conveyor belt.
