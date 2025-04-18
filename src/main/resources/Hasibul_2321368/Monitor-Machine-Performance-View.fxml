@@ -11,15 +11,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hasibul_2321368.MonitorMachinePerformanceView">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hasibul_2321368.MonitorMachinePerformanceView1">
    <children>
       <Label layoutX="367.0" layoutY="28.0" text="Monitor Machine Performance">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <TableView layoutX="13.0" layoutY="473.0" prefHeight="200.0" prefWidth="1116.0">
+      <TableView layoutX="6.0" layoutY="514.0" prefHeight="200.0" prefWidth="1116.0">
         <columns>
           <TableColumn fx:id="MachineIDTableColumn" prefWidth="125.88681221008301" text="Machine ID" />
           <TableColumn fx:id="MachineStatusTableColumn" minWidth="0.0" prefWidth="121.35847473144531" text="Machine Status" />
@@ -31,7 +30,7 @@
             <TableColumn fx:id="MaintenanceTaskStatusTableColumn" minWidth="0.0" prefWidth="198.3394775390625" text="Maintenance Task Status" />
         </columns>
       </TableView>
-      <Button fx:id="GenerateButton" layoutX="628.0" layoutY="383.0" mnemonicParsing="false" onAction="#GenerateButtonOnAction" text="Generate" />
+      <Button fx:id="GenerateButton" layoutX="882.0" layoutY="331.0" mnemonicParsing="false" onAction="#GenerateButtonOnAction" prefHeight="53.0" prefWidth="130.0" text="Generate" />
       <Label layoutX="130.0" layoutY="93.0" text="Machine ID" />
       <TextField fx:id="MachineIDTextField" layoutX="241.0" layoutY="87.0" />
       <Label layoutX="130.0" layoutY="137.0" text="Machine Status" />
@@ -49,6 +48,6 @@
       <Label layoutX="669.0" layoutY="105.0" text="Technician Assignment" />
       <ComboBox fx:id="TechnicianAssignmentComboBox" layoutX="833.0" layoutY="100.0" prefHeight="34.0" prefWidth="165.0" promptText="Enter Technician" />
       <Label layoutX="669.0" layoutY="207.0" text="Maintenance Task Status" />
-      <ComboBox fx:id="MaintenanceTaskStatusComboBox" layoutX="854.0" layoutY="201.0" prefHeight="34.0" prefWidth="177.0" promptText="Enter Task Status" />
+      <TextField fx:id="EnterTaskStatusTextField" layoutX="851.0" layoutY="196.0" />
    </children>
 </AnchorPane>
