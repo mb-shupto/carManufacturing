@@ -33,8 +33,8 @@
       <ComboBox fx:id="resolveBottleneckComboBox" layoutX="455.0" layoutY="317.0" prefHeight="26.0" prefWidth="198.0" promptText="Choose Bottleneck Condition" />
       <Button layoutX="445.0" layoutY="400.0" mnemonicParsing="false" onAction="#allocateResourceOnAction" text="Allocate Resource" />
       <Button layoutX="559.0" layoutY="480.0" mnemonicParsing="false" onAction="#backOnAction" text="Back" />
-      <Label fx:id="updateOutputLabel" layoutX="39.0" layoutY="463.0" prefHeight="18.0" prefWidth="263.0" />
-      <Label fx:id="resolveOutputLabel" layoutX="344.0" layoutY="427.0" prefHeight="18.0" prefWidth="304.0" />
+      <Label fx:id="updateOutputLabel" layoutX="15.0" layoutY="463.0" prefHeight="18.0" prefWidth="287.0" />
+      <Label fx:id="outputLabel2" layoutX="344.0" layoutY="427.0" prefHeight="18.0" prefWidth="304.0" />
       <TableView fx:id="bottleneckStatusTableView" layoutX="343.0" layoutY="63.0" prefHeight="200.0" prefWidth="287.0">
          <columns>
             <TableColumn fx:id="bottleneckColumn" prefWidth="140.00000762939453" text="Bottleneck" />
