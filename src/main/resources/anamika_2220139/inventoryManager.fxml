@@ -3,19 +3,33 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="anamika_2220139.InventoryManagerController">
 
-<AnchorPane prefHeight="481.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="anamika_2220139.inventoryManagerController">
-   <children>
-      <Label layoutX="339.0" layoutY="79.0" text="Inventory Manager" />
-      <Button layoutX="138.0" layoutY="160.0" mnemonicParsing="false" onAction="#updateInventoryOnAction" text="Update Inventory level" />
-      <Button layoutX="138.0" layoutY="216.0" mnemonicParsing="false" text="Generate Report" />
-      <Button layoutX="138.0" layoutY="264.0" mnemonicParsing="false" text="Manage Defective Parts" />
-      <Button layoutX="138.0" layoutY="316.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="462.0" layoutY="148.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="462.0" layoutY="204.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="462.0" layoutY="264.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="462.0" layoutY="316.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="676.0" layoutY="406.0" mnemonicParsing="false" onAction="#backOnAction" text="Back" />
-   </children>
+   <Label layoutX="300.0" layoutY="50.0" text="Inventory Management System">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Label>
+
+   <!-- Left Side Buttons -->
+   <Button layoutX="50.0" layoutY="120.0" mnemonicParsing="false" onAction="#updateInventoryOnAction" prefHeight="40.0" prefWidth="250.0" text="Update Inventory" />
+
+   <Button layoutX="50.0" layoutY="180.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="40.0" prefWidth="250.0" text="Generate Low-Stock Report" />
+
+   <Button layoutX="50.0" layoutY="240.0" mnemonicParsing="false" onAction="#manageDefectivePartsOnAction" prefHeight="40.0" prefWidth="250.0" text="Manage Defective Parts" />
+
+   <Button layoutX="50.0" layoutY="300.0" mnemonicParsing="false" onAction="#forecastInventoryOnAction" prefHeight="40.0" prefWidth="250.0" text="Forecast Inventory Demand" />
+
+   <!-- Right Side Buttons -->
+   <Button layoutX="350.0" layoutY="120.0" mnemonicParsing="false" onAction="#conductPhysicalStockOnAction" prefHeight="40.0" prefWidth="250.0" text="Conduct Physical Stock Audit" />
+
+   <Button layoutX="350.0" layoutY="180.0" mnemonicParsing="false" onAction="#setAutomaticReorderPointsOnAction" prefHeight="40.0" prefWidth="250.0" text="Set Automatic Reorder Points" />
+
+   <Button layoutX="350.0" layoutY="240.0" mnemonicParsing="false" onAction="#inventoryReplenishmentOnAction" prefHeight="40.0" prefWidth="250.0" text="JIT Inventory Replenishment" />
+
+   <Button layoutX="350.0" layoutY="300.0" mnemonicParsing="false" onAction="#conductSupplierQualityOnAction" prefHeight="40.0" prefWidth="250.0" text="Conduct Supplier Quality Audit" />
+
+   <Button fx:id="backButton" layoutX="650.0" layoutY="500.0" mnemonicParsing="false" onAction="#logOutOnAction" text="Logout" />
 </AnchorPane>
