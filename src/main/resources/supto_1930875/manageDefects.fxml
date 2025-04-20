@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.ManageDefectsController">
+    <children>
+        <!-- Title -->
+        <Label layoutX="211.0" layoutY="79.0" text="Manage Defect Reports">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <!-- Defect selection -->
+        <Label layoutX="93.0" layoutY="165.0" text="Select Defect:" />
+        <ComboBox fx:id="defectComboBox" layoutX="211.0" layoutY="161.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a defect category" />
+
+        <!-- Repair team selection -->
+        <Label layoutX="93.0" layoutY="215.0" text="Assign to Team:" />
+        <ComboBox fx:id="teamComboBox" layoutX="211.0" layoutY="211.0" prefHeight="26.0" prefWidth="222.0" promptText="Select a team" />
+
+        <!-- Status selection -->
+        <Label layoutX="93.0" layoutY="267.0" text="Set Status:" />
+        <ComboBox fx:id="statusComboBox" layoutX="211.0" layoutY="263.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a status" />
+
+        <!-- Confirm Action button -->
+        <Button layoutX="211.0" layoutY="338.0" onAction="#confirmOnAction" text="Confirm Action" />
+
+        <!-- Back button -->
+        <Button layoutX="570.0" layoutY="460.0" onAction="#backOnAction" text="Back" />
+      <Label fx:id="outputLabel" layoutX="223.0" layoutY="14.0" prefHeight="64.0" prefWidth="418.0" />
+    </children>
+</AnchorPane>
