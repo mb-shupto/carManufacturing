@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.ApproveBatchesController">
+    <children>
+        <Label layoutX="196.0" layoutY="42.0" text="Approve Production Batches">
+            <font><Font name="System Bold" size="20.0" /></font>
+        </Label>
+
+        <TableView fx:id="batchTable" layoutX="21.0" layoutY="129.0" prefHeight="234.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="batchIdCol" prefWidth="171.99994468688965" text="Batch ID" />
+                <TableColumn fx:id="testResultCol" prefWidth="210.4000244140625" text="Test Result" />
+                <TableColumn fx:id="statusCol" prefWidth="216.80001831054688" text="Status" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="196.0" layoutY="383.0" onAction="#approveBatch" text="Approve" />
+        <Button layoutX="330.0" layoutY="383.0" onAction="#rejectBatch" text="Reject" />
+        <Button layoutX="570.0" layoutY="460.0" onAction="#backOnAction" text="Back" />
+      <Label fx:id="outputLabel" layoutX="21.0" layoutY="431.0" prefHeight="60.0" prefWidth="491.0" />
+    </children>
+</AnchorPane>
