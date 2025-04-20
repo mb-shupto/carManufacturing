@@ -28,7 +28,7 @@
         <ComboBox fx:id="statusComboBox" layoutX="211.0" layoutY="263.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a status" />
 
         <!-- Confirm Action button -->
-        <Button layoutX="211.0" layoutY="338.0" onAction="#confirmOnAction" text="Confirm Action" />
+        <Button layoutX="211.0" layoutY="338.0" onAction="#updateOnAction" text="Update Report" />
 
         <!-- Back button -->
         <Button layoutX="570.0" layoutY="460.0" onAction="#backOnAction" text="Back" />
