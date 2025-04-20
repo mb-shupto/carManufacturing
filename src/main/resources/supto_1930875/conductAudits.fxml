@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.ConductAuditsController">
+    <children>
+        <!-- Title -->
+        <Label layoutX="194.0" layoutY="42.0" text="Conduct Quality Audits">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <!-- Batch selection -->
+        <Label layoutX="90.0" layoutY="150.0" text="Select Batch:" />
+        <ComboBox fx:id="batchComboBox" layoutX="210.0" layoutY="150.0" prefHeight="26.0" prefWidth="256.0" promptText="Select a Batch" />
+
+        <!-- Audit result selection -->
+        <Label layoutX="90.0" layoutY="223.0" text="Audit Result:" />
+        <ComboBox fx:id="resultComboBox" layoutX="210.0" layoutY="223.0" prefHeight="26.0" prefWidth="256.0" promptText="Choose an audit result" />
+
+        <!-- Confirm Audit button -->
+        <Button layoutX="194.0" layoutY="297.0" onAction="#confirmAuditOnAction" text="Confirm Audit" />
+
+        <!-- Back button -->
+        <Button layoutX="570.0" layoutY="460.0" onAction="#backOnAction" text="Back" />
+      <Label fx:id="outputLabel" layoutX="399.0" layoutY="100.0" prefHeight="18.0" prefWidth="250.0" />
+    </children>
+</AnchorPane>
