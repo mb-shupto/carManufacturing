@@ -97,6 +97,18 @@ public class QaEngineerController
 
     @javafx.fxml.FXML
     public void trainInspectionTeamOnAction(ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/trainTeam.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Approve Production Batches");
+            stage.show();
+
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     @javafx.fxml.FXML
