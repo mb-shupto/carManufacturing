@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hasibul_2321368.DealerOrderManagementController">
+   <children>
+      <Label layoutX="403.0" layoutY="37.0" text="Dealer Order Management">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="148.0" text="Order ID" />
+      <Label layoutX="144.0" layoutY="203.0" text="Dealer Name" />
+      <Label layoutX="609.0" layoutY="275.0" text="Price Per Unit" />
+      <Label layoutX="144.0" layoutY="257.0" text="Car Model" />
+      <Label layoutX="549.0" layoutY="220.0" text="Order Status" />
+      <Label layoutX="610.0" layoutY="328.0" text="Total Amount" />
+      <Label layoutX="119.0" layoutY="316.0" text="Quantity Ordered" />
+      <TextField fx:id="OrderIDTextField" layoutX="265.0" layoutY="142.0" />
+      <TextField fx:id="DealerNameTextField" layoutX="265.0" layoutY="198.0" />
+      <TextField fx:id="CarModelTextField" layoutX="265.0" layoutY="252.0" />
+      <DatePicker fx:id="OrderDateDatePicker" layoutX="609.0" layoutY="131.0" promptText="Order Date" />
+      <RadioButton fx:id="PendingRadioButton" layoutX="644.0" layoutY="219.0" mnemonicParsing="false" text="Pending" />
+      <RadioButton fx:id="RejectedRadioButton" layoutX="854.0" layoutY="220.0" mnemonicParsing="false" text="Rejected" />
+      <RadioButton fx:id="ApprovedRadioButton" layoutX="742.0" layoutY="219.0" mnemonicParsing="false" text="Approved" />
+      <TextField fx:id="QuantityOrderedTextField" layoutX="265.0" layoutY="311.0" />
+      <TextField fx:id="PricePerUnitTextField" layoutX="721.0" layoutY="270.0" />
+      <DatePicker fx:id="DeliveryDateDatePicker" layoutX="449.0" layoutY="376.0" promptText="Delivery Date" />
+      <TextField fx:id="TotalAmountTextField" layoutX="721.0" layoutY="322.0" promptText="Total Amount" />
+      <TableView layoutX="8.0" layoutY="499.0" prefHeight="200.0" prefWidth="1184.0">
+        <columns>
+          <TableColumn fx:id="OrderIDTableColumn" prefWidth="102.339599609375" text="Order ID" />
+          <TableColumn fx:id="DealerNameTableColumn" prefWidth="156.67926025390625" text="Dealer Name" />
+            <TableColumn fx:id="CarModelTableColumn" minWidth="1.8114013671875" prefWidth="134.03778076171875" text="Car Model" />
+            <TableColumn fx:id="OrderDateTAbleColumn" prefWidth="123.16970825195312" text="Order Date" />
+            <TableColumn fx:id="QuantityOrderedTableColumn" prefWidth="171.1697998046875" text="Quantity Ordered" />
+            <TableColumn fx:id="PricePerUnitTableColumn" prefWidth="118.6416015625" text="Price Per Unit" />
+            <TableColumn fx:id="OrderStatusTableColumn" prefWidth="122.2642822265625" text="Order Status" />
+            <TableColumn fx:id="TotalAmountTableColumn" prefWidth="121.3585205078125" text="Total Amount" />
+            <TableColumn fx:id="DeliveryDateTableColumn" prefWidth="131.32080078125" text="Delivery Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="GenerateButton" layoutX="790.0" layoutY="400.0" mnemonicParsing="false" onAction="#GenerateButtonOnAction" text="Generate" />
+   </children>
+</AnchorPane>

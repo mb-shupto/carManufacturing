@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hasibul_2321368.SMCustomerOrderManagementviewcontroller">
+   <children>
+      <Label layoutX="421.0" layoutY="34.0" text="Customer Order Management">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="105.0" text="Order ID" />
+      <TextField fx:id="OrderIDTextField" layoutX="213.0" layoutY="99.0" promptText="Enter ID" />
+      <Label layoutX="88.0" layoutY="150.0" text="Customer Name" />
+      <TextField fx:id="CustomerNameTextField" layoutX="213.0" layoutY="144.0" promptText="Enter Name" />
+      <Label layoutX="89.0" layoutY="284.0" text="Order Status" />
+      <Label layoutX="88.0" layoutY="240.0" text="Order Date" />
+      <ComboBox fx:id="CarModelComboBox" layoutX="688.0" layoutY="111.0" prefWidth="150.0" promptText="Car Model" />
+      <DatePicker fx:id="OrderDateDatePicker" layoutX="210.0" layoutY="235.0" />
+      <RadioButton fx:id="PendingRadioButton" layoutX="211.0" layoutY="284.0" mnemonicParsing="false" text="Pending" />
+      <RadioButton fx:id="DeliveredRadioButton" layoutX="448.0" layoutY="284.0" mnemonicParsing="false" text="Delivered" />
+      <RadioButton fx:id="ShippedRadioButton" layoutX="329.0" layoutY="284.0" mnemonicParsing="false" text="Shipped" />
+      <Label layoutX="88.0" layoutY="194.0" text="Total Amount" />
+      <TextField fx:id="TotalAmountTextField" layoutX="212.0" layoutY="188.0" />
+      <Label layoutX="89.0" layoutY="334.0" text="Payment Status" />
+      <RadioButton fx:id="CompletedRadioButton" layoutX="214.0" layoutY="334.0" mnemonicParsing="false" text="Completed" />
+      <RadioButton fx:id="FailedRadioButton" layoutX="451.0" layoutY="334.0" mnemonicParsing="false" text="Failed" />
+      <RadioButton fx:id="PendingRadioButton" layoutX="332.0" layoutY="334.0" mnemonicParsing="false" text="Pending" />
+      <DatePicker fx:id="DeliveryDateDatePicker" layoutX="688.0" layoutY="171.0" promptText="Enter Date" />
+      <TableView layoutX="75.0" layoutY="434.0" prefHeight="275.0" prefWidth="1025.0">
+        <columns>
+          <TableColumn fx:id="OrderIDTableColumn" prefWidth="129.50946044921875" text="Order ID" />
+          <TableColumn fx:id="CustomerNameTableColumn" prefWidth="149.43394470214844" text="Customer Name" />
+            <TableColumn fx:id="TotalAmountTableColumn" minWidth="0.0" prefWidth="123.1697998046875" text="Total Amount" />
+            <TableColumn fx:id="OrderDateTableColumn" prefWidth="113.20758056640625" text="Order Date" />
+            <TableColumn fx:id="OrderStatusTableColumn" minWidth="0.0" prefWidth="128.603759765625" text="Order Status" />
+            <TableColumn fx:id="CarModelTableColumn" prefWidth="123.1697998046875" text="Car Model" />
+            <TableColumn fx:id="DeliveryDateTableColumn" minWidth="6.339599609375" prefWidth="117.73583984375" text="Delivery Date" />
+            <TableColumn fx:id="PaymentStatusTableColumn" prefWidth="137.660400390625" text="Payment Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="GenerateButton" layoutX="766.0" layoutY="267.0" mnemonicParsing="false" onAction="#GenerateButtonOnAction" text="Generate" />
+      <Label layoutX="584.0" layoutY="178.0" text="Delivery Date" />
+   </children>
+</AnchorPane>
