@@ -49,7 +49,7 @@ public class QaEngineerController
     }
 
     @javafx.fxml.FXML
-    public void conductQualityAuditOnAction(ActionEvent actionEvent) {
+    public void conductQualityAuditOnAction(ActionEvent actionEvent) throws IOException {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/conductAudits.fxml"));
