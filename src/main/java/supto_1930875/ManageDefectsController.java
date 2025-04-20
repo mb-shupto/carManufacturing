@@ -48,7 +48,8 @@ public class ManageDefectsController
     }
 
     @javafx.fxml.FXML
-    public void confirmOnAction(ActionEvent actionEvent) {
+    public void updateOnAction(ActionEvent actionEvent) {
+
 
         String defect = defectComboBox.getValue();
         String team = teamComboBox.getValue();
