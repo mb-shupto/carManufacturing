@@ -92,6 +92,18 @@ public class QaEngineerController
     }
 
     @javafx.fxml.FXML
-    public void analyzeDefectOnAction(ActionEvent actionEvent) {
+    public void analyzeDefectOnAction(ActionEvent actionEvent)  throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/analyzeDefects.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Analyze Defect Trends Dashboard");
+            stage.show();
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 }
