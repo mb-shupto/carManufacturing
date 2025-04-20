@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.TrainTeamController">
+    <children>
+        <Label layoutX="187.0" layoutY="81.0" prefHeight="41.0" prefWidth="218.0" text="Train Inspection Team">
+            <font><Font name="System Bold" size="20.0" /></font>
+        </Label>
+
+        <Label layoutX="148.0" layoutY="190.0" text="Select Trainee:" />
+        <ComboBox fx:id="traineeComboBox" layoutX="255.0" layoutY="185.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose a Trainee" />
+        <Label layoutX="147.0" layoutY="243.0" text="Training Topic:" />
+        <TextField fx:id="topicTextField" layoutX="255.0" layoutY="239.0" prefHeight="26.0" prefWidth="218.0" promptText="Type Training Topic here" />
+        <Button layoutX="214.0" layoutY="301.0" onAction="#logTrainingOnAction" text="Log Training" />
+        <Button layoutX="570.0" layoutY="460.0" onAction="#backOnAction" text="Back" />
+      <Label fx:id="outputLabel" layoutX="296.0" layoutY="33.0" prefHeight="34.0" prefWidth="341.0" />
+    </children>
+</AnchorPane>
