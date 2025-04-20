@@ -9,29 +9,34 @@
 <AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.ManageDefectsController">
     <children>
         <!-- Title -->
-        <Label layoutX="211.0" layoutY="79.0" text="Manage Defect Reports">
+        <Label layoutX="219.0" layoutY="45.0" text="Manage Defect Reports">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
 
         <!-- Defect selection -->
-        <Label layoutX="93.0" layoutY="165.0" text="Select Defect:" />
-        <ComboBox fx:id="defectComboBox" layoutX="211.0" layoutY="161.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a defect category" />
+        <Label layoutX="117.0" layoutY="140.0" text="Select Defect:" />
+        <ComboBox fx:id="defectComboBox" layoutX="219.0" layoutY="136.0" prefHeight="30.0" prefWidth="206.0" promptText="Choose a Defect Option" />
 
         <!-- Repair team selection -->
-        <Label layoutX="93.0" layoutY="215.0" text="Assign to Team:" />
-        <ComboBox fx:id="teamComboBox" layoutX="211.0" layoutY="211.0" prefHeight="26.0" prefWidth="222.0" promptText="Select a team" />
+        <Label layoutX="111.0" layoutY="201.0" text="Assign to Team:" />
+        <ComboBox fx:id="teamComboBox" layoutX="219.0" layoutY="197.0" prefHeight="30.0" prefWidth="206.0" promptText="Select a Team" />
 
         <!-- Status selection -->
-        <Label layoutX="93.0" layoutY="267.0" text="Set Status:" />
-        <ComboBox fx:id="statusComboBox" layoutX="211.0" layoutY="263.0" prefHeight="26.0" prefWidth="222.0" promptText="Choose a status" />
+        <Label layoutX="125.0" layoutY="266.0" text="Set Status:" />
+        <ComboBox fx:id="statusComboBox" layoutX="219.0" layoutY="260.0" prefHeight="30.0" prefWidth="206.0" promptText="Select a Status" />
 
-        <!-- Confirm Action button -->
-        <Button layoutX="211.0" layoutY="338.0" onAction="#updateOnAction" text="Update Report" />
+        <!-- Update Report button -->
+        <Button layoutX="172.0" layoutY="339.0" onAction="#updateReportOnAction" text="Update Report" />
+
+        <!-- View Defect Reports button -->
+        <Button layoutX="52.0" layoutY="460.0" onAction="#viewDefectReportsOnAction" text="View Defect Reports" />
+
+        <!-- Output Label for confirmation -->
+        <Label fx:id="outputLabel" layoutX="52.0" layoutY="392.0" prefHeight="30.0" prefWidth="586.0" wrapText="true" />
 
         <!-- Back button -->
         <Button layoutX="570.0" layoutY="460.0" onAction="#backOnAction" text="Back" />
-      <Label fx:id="outputLabel" layoutX="223.0" layoutY="14.0" prefHeight="64.0" prefWidth="418.0" />
     </children>
 </AnchorPane>
