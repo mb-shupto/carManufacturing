@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="493.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.QaEngineerController">
    <children>
       <Label layoutX="194.0" layoutY="14.0" text="Quality Assurance Engineer">
@@ -13,14 +12,14 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" onAction="#inspectCarOnAction" prefHeight="26.0" prefWidth="173.0" text="Inspect Car" />
-      <Button layoutX="57.0" layoutY="152.0" mnemonicParsing="false" onAction="#testFinishedCarOnAction" prefHeight="26.0" prefWidth="173.0" text="Test Finished Car" />
-      <Button layoutX="57.0" layoutY="207.0" mnemonicParsing="false" onAction="#manageDefectReportOnAction" prefHeight="26.0" prefWidth="173.0" text="Manager Defect Report" />
+      <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" onAction="#inspectCarOnAction" prefHeight="26.0" prefWidth="173.0" text="Inspect Car Components" />
+      <Button layoutX="57.0" layoutY="152.0" mnemonicParsing="false" onAction="#testFinishedCarOnAction" prefHeight="26.0" prefWidth="173.0" text="Test Finished Cars" />
+      <Button layoutX="57.0" layoutY="207.0" mnemonicParsing="false" onAction="#manageDefectReportOnAction" prefHeight="26.0" prefWidth="173.0" text="Manage Defect Reports" />
       <Button layoutX="57.0" layoutY="270.0" mnemonicParsing="false" onAction="#conductQualityAuditOnAction" prefHeight="26.0" prefWidth="173.0" text="Conduct Quality Audit" />
       <Button layoutX="412.0" layoutY="270.0" mnemonicParsing="false" onAction="#trainInspectionTeamOnAction" prefHeight="26.0" prefWidth="173.0" text="Train Inspection Team" />
       <Button layoutX="412.0" layoutY="207.0" mnemonicParsing="false" onAction="#updateQualityStandardsOnAction" prefHeight="26.0" prefWidth="173.0" text="Update Quality Standards" />
       <Button layoutX="412.0" layoutY="152.0" mnemonicParsing="false" onAction="#analyzeDefectOnAction" prefHeight="26.0" prefWidth="173.0" text="Analyze Defect Trends" />
-      <Button layoutX="412.0" layoutY="98.0" mnemonicParsing="false" onAction="#approveProductionBatchOnAction" prefHeight="26.0" prefWidth="173.0" text="Approve Production Batch" />
+      <Button layoutX="412.0" layoutY="98.0" mnemonicParsing="false" onAction="#approveProductionBatchOnAction" prefHeight="26.0" prefWidth="173.0" text="Approve Production Batches" />
       <Button layoutX="526.0" layoutY="420.0" mnemonicParsing="false" onAction="#backOnAction" text="Back" />
    </children>
 </AnchorPane>

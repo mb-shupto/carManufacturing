@@ -37,7 +37,7 @@ public class QaEngineerController
         Node source = (Node) actionEvent.getSource();
         Stage stage = (Stage) source.getScene().getWindow();
         stage.setScene(new Scene(root));
-        stage.setTitle("Login Dashboard");
+        stage.setTitle("Test Finished Cars Dashboard");
         stage.show();
     }catch (IOException e){
         e.printStackTrace();
@@ -46,6 +46,17 @@ public class QaEngineerController
 
     @javafx.fxml.FXML
     public void inspectCarOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/inspectComponents.fxml"));
+            Parent root = fxmlLoader.load();
+            Node scene = (Node) actionEvent.getSource();
+            Stage stage = (Stage) scene.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Inspect Car Components Dashboard");
+            stage.show();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     @javafx.fxml.FXML
@@ -57,7 +68,7 @@ public class QaEngineerController
             Node source = (Node) actionEvent.getSource();
             Stage stage = (Stage) source.getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Production Manager Dashboard");
+            stage.setTitle("Conduct Quality Audit Dashboard");
             stage.show();
         }catch (IOException exception){
             exception.printStackTrace();
@@ -88,7 +99,7 @@ public class QaEngineerController
             Node source = (Node) actionEvent.getSource();
             Stage stage = (Stage) source.getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Login Dashboard");
+            stage.setTitle("Manage Defect Report Dashboard");
             stage.show();
         }catch (IOException e){
             e.printStackTrace();
@@ -103,7 +114,7 @@ public class QaEngineerController
             Node source = (Node) actionEvent.getSource();
             Stage stage = (Stage) source.getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Approve Production Batches");
+            stage.setTitle("train Inspection Team Dashboard");
             stage.show();
 
         } catch (IOException e){
@@ -119,7 +130,7 @@ public class QaEngineerController
             Node source = (Node) actionEvent.getSource();
             Stage stage = (Stage) source.getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Login Dashboard");
+            stage.setTitle("Update Quality Standards Dashboard");
             stage.show();
         }catch (IOException e){
             e.printStackTrace();
