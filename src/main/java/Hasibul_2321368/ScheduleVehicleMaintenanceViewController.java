@@ -1,60 +1,46 @@
 package Hasibul_2321368;
 
+import Hasibul_2321368.modelclass.VehicleMaintenance;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
-import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class ScheduleVehicleMaintenanceViewController {
 
-    @javafx.fxml.FXML
-    private TextField RequestIDTextField;
-    @javafx.fxml.FXML
-    private TextField VehicleIdTextField;
-    @javafx.fxml.FXML
-    private TextField IssueDescriptionTextField;
-    @javafx.fxml.FXML
-    private TextField VehicleInformationTextField;
-    @javafx.fxml.FXML
-    private DatePicker RequestDateDatePicker;
-    @javafx.fxml.FXML
-    private DatePicker ScheduledDateDatePicker;
-    @javafx.fxml.FXML
-    private ComboBox<String> TechnicianAssignedComboBox;
-    @javafx.fxml.FXML
-    private ComboBox<String> TaskStatusComboBox;
-    @javafx.fxml.FXML
-    private CheckBox SparePartsVerificationCheckBox;
-    @javafx.fxml.FXML
-    private TableView<VehicleMaintenanceRequest> maintenanceRequestTableView;
+    @FXML private TextField RequestIDTextField;
+    @FXML private TextField VehicleIdTextField;
+    @FXML private TextField IssueDescriptionTextField;
+    @FXML private TextField VehicleInformationTextField;
 
-    @javafx.fxml.FXML
-    private TableColumn<VehicleMaintenanceRequest, String> RequestIDTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<VehicleMaintenanceRequest, String> VehicleIDTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<VehicleMaintenanceRequest, String> IssueDescriptionTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<VehicleMaintenanceRequest, String> TechnicianAssignTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<VehicleMaintenanceRequest, String> VehicleInformationTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<VehicleMaintenanceRequest, LocalDate> RequestDateTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<VehicleMaintenanceRequest, LocalDate> ScheduledDateTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<VehicleMaintenanceRequest, String> TaskStatusTableColumn;
+    @FXML private DatePicker RequestDateDatePicker;
+    @FXML private DatePicker ScheduledDateDatePicker;
 
-    private ObservableList<VehicleMaintenanceRequest> maintenanceRequestList = FXCollections.observableArrayList();
+    @FXML private ComboBox<String> TechnicianAssignedComboBox;
+    @FXML private ComboBox<String> TaskStatusComboBox;
 
-    @javafx.fxml.FXML
-    private void initialize() {
-        // Initialize ComboBoxes with options
-        TechnicianAssignedComboBox.getItems().addAll("Ariyen", "Joti", "Asif", "Abir");
-        TaskStatusComboBox.getItems().addAll("Scheduled", "In Progress", "Completed");
+    @FXML private CheckBox SparePartsVerificationCheckBox;
 
-        // TableView columns setup
+    @FXML private Button ConfirmButton;
+    @FXML private Button CancelButton;
+
+    @FXML private TableView<VehicleMaintenance> maintenanceTableView;
+    @FXML private TableColumn<VehicleMaintenance, String> RequestIDTableColumn;
+    @FXML private TableColumn<VehicleMaintenance, String> VehicleIDTableColumn;
+    @FXML private TableColumn<VehicleMaintenance, String> IssueDescriptionTableColumn;
+    @FXML private TableColumn<VehicleMaintenance, String> TechnicianAssignTableColumn;
+    @FXML private TableColumn<VehicleMaintenance, String> VehicleInformationTableColumn;
+    @FXML private TableColumn<VehicleMaintenance, String> RequestDateTableColumn;
+    @FXML private TableColumn<VehicleMaintenance, String> ScheduledDateTableColumn;
+    @FXML private TableColumn<VehicleMaintenance, String> TaskStatusTableColumn;
+
+    // Observable list for storing vehicle maintenance data
+    private ObservableList<VehicleMaintenance> maintenanceList = FXCollections.observableArrayList();
+
+    @FXML
+    public void initialize() {
+        // Set up TableView columns with appropriate cell value factories
         RequestIDTableColumn.setCellValueFactory(cellData -> cellData.getValue().requestIDProperty());
         VehicleIDTableColumn.setCellValueFactory(cellData -> cellData.getValue().vehicleIDProperty());
         IssueDescriptionTableColumn.setCellValueFactory(cellData -> cellData.getValue().issueDescriptionProperty());
@@ -64,55 +50,59 @@ public class ScheduleVehicleMaintenanceViewController {
         ScheduledDateTableColumn.setCellValueFactory(cellData -> cellData.getValue().scheduledDateProperty());
         TaskStatusTableColumn.setCellValueFactory(cellData -> cellData.getValue().taskStatusProperty());
 
-        maintenanceRequestTableView.setItems(maintenanceRequestList);
+        // Set TableView to display the list of vehicle maintenance records
+        maintenanceTableView.setItems(maintenanceList);
+
+        // Initialize ComboBox with technician names (example data)
+        TechnicianAssignedComboBox.getItems().addAll("Technician A", "Technician B", "Technician C");
+        TaskStatusComboBox.getItems().addAll("Scheduled", "In Progress", "Completed");
     }
 
-    @javafx.fxml.FXML
-    private void ConfirmButtonOnAction(MouseEvent event) {
-        // Validate input fields
-        if (RequestIDTextField.getText().isEmpty() || VehicleIdTextField.getText().isEmpty() || IssueDescriptionTextField.getText().isEmpty()) {
-            showAlert("Error", "Please fill all the required fields.");
-            return;
-        }
-
-        // Get input values
+    // Confirm button action: Add a new vehicle maintenance record
+    @FXML
+    private void ConfirmButtonOnAction() {
         String requestID = RequestIDTextField.getText();
         String vehicleID = VehicleIdTextField.getText();
         String issueDescription = IssueDescriptionTextField.getText();
-        String technicianAssigned = TechnicianAssignedComboBox.getValue();
         String vehicleInformation = VehicleInformationTextField.getText();
-        LocalDate requestDate = RequestDateDatePicker.getValue();
-        LocalDate scheduledDate = ScheduledDateDatePicker.getValue();
+        String requestDate = RequestDateDatePicker.getValue() != null ? RequestDateDatePicker.getValue().format(DateTimeFormatter.ISO_DATE) : "";
+        String scheduledDate = ScheduledDateDatePicker.getValue() != null ? ScheduledDateDatePicker.getValue().format(DateTimeFormatter.ISO_DATE) : "";
+        String technicianAssigned = TechnicianAssignedComboBox.getValue();
         String taskStatus = TaskStatusComboBox.getValue();
         boolean sparePartsVerification = SparePartsVerificationCheckBox.isSelected();
 
-        // Create a new vehicle maintenance request
-        VehicleMaintenanceRequest request = new VehicleMaintenanceRequest(requestID, vehicleID, issueDescription, technicianAssigned,
-                vehicleInformation, requestDate, scheduledDate, taskStatus, sparePartsVerification);
+        // Create a new VehicleMaintenance object
+        VehicleMaintenance newMaintenanceRequest = new VehicleMaintenance(
+                requestID, vehicleID, issueDescription, technicianAssigned, vehicleInformation,
+                requestDate, scheduledDate, taskStatus, sparePartsVerification
+        );
 
-        // Add the new request to the table
-        maintenanceRequestList.add(request);
-    }
+        // Add the new record to the list
+        maintenanceList.add(newMaintenanceRequest);
 
-    @javafx.fxml.FXML
-    private void CancelButtonOnAction(MouseEvent event) {
-        // Clear all fields
+        // Clear the input fields
         RequestIDTextField.clear();
         VehicleIdTextField.clear();
         IssueDescriptionTextField.clear();
         VehicleInformationTextField.clear();
-        TechnicianAssignedComboBox.getSelectionModel().clearSelection();
-        TaskStatusComboBox.getSelectionModel().clearSelection();
-        SparePartsVerificationCheckBox.setSelected(false);
         RequestDateDatePicker.setValue(null);
         ScheduledDateDatePicker.setValue(null);
+        TechnicianAssignedComboBox.setValue(null);
+        TaskStatusComboBox.setValue(null);
+        SparePartsVerificationCheckBox.setSelected(false);
     }
 
-    private void showAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    // Cancel button action: Clear input fields
+    @FXML
+    private void CancelButtonOnAction() {
+        RequestIDTextField.clear();
+        VehicleIdTextField.clear();
+        IssueDescriptionTextField.clear();
+        VehicleInformationTextField.clear();
+        RequestDateDatePicker.setValue(null);
+        ScheduledDateDatePicker.setValue(null);
+        TechnicianAssignedComboBox.setValue(null);
+        TaskStatusComboBox.setValue(null);
+        SparePartsVerificationCheckBox.setSelected(false);
     }
 }

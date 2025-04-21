@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hasibul_2321368.stockandpricingcontroller">
    <children>
       <Label layoutX="447.0" layoutY="55.0" text="Stock and Pricing">
          <font>
@@ -14,7 +17,26 @@
          </font>
       </Label>
       <Label layoutX="94.0" layoutY="152.0" text="Car Model" />
-      <ComboBox layoutX="240.0" layoutY="146.0" prefWidth="150.0" />
-      <Label layoutX="94.0" layoutY="228.0" text="Available Stock" />
+      <ComboBox fx:id="CarModelComboBox" editable="true" layoutX="240.0" layoutY="146.0" prefWidth="150.0" promptText="Enter Model" />
+      <Label layoutX="94.0" layoutY="215.0" text="Available Stock" />
+      <Label layoutX="94.0" layoutY="272.0" text="Stock Status" />
+      <ComboBox fx:id="StockStatusCombobox" editable="true" layoutX="240.0" layoutY="266.0" prefWidth="150.0" promptText="View Status" />
+      <Label layoutX="491.0" layoutY="152.0" text="Unit Price" />
+      <TextField fx:id="UnitPriceTextField" layoutX="610.0" layoutY="146.0" />
+      <Label layoutX="491.0" layoutY="203.0" text="Total Amount" />
+      <TextField fx:id="TotalAmountTextField" layoutX="610.0" layoutY="197.0" />
+      <Button fx:id="ApproveOrderButton" layoutX="619.0" layoutY="309.0" mnemonicParsing="false" onAction="#ApproveOrderButtonOnAction" text="Approve Order" />
+      <Button fx:id="RejectOrderButton" layoutX="794.0" layoutY="309.0" mnemonicParsing="false" onAction="#RejectOrderButtonOnAction" text="Reject Order" />
+      <Button fx:id="ConfirmOrderButton" layoutX="718.0" layoutY="373.0" mnemonicParsing="false" onAction="#ConfirmOrderButtonOnAction" text="Confirm Order" />
+      <TableView layoutX="65.0" layoutY="481.0" prefHeight="254.0" prefWidth="952.0">
+        <columns>
+          <TableColumn fx:id="CarModelTableColumn" prefWidth="206.49059295654297" text="Car Model" />
+          <TableColumn fx:id="AvailableStockTableColumn" prefWidth="257.20751953125" text="Available Stock" />
+            <TableColumn fx:id="StockStatusTableColumn" prefWidth="183.84912109375" text="Stock Status" />
+            <TableColumn fx:id="UnitPriceTableColumn" prefWidth="148.52825927734375" text="Unit Price" />
+            <TableColumn fx:id="TotalAmountTableColumn" prefWidth="149.433837890625" text="Total Amount" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="AvailableStockComboBox" editable="true" layoutX="240.0" layoutY="210.0" prefWidth="150.0" promptText="View Stock" />
    </children>
 </AnchorPane>

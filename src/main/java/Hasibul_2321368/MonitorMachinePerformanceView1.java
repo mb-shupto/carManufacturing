@@ -1,4 +1,5 @@
 package Hasibul_2321368;
+import Hasibul_2321368.modelclass.Machine;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
@@ -6,7 +7,6 @@ import javafx.scene.input.MouseEvent;
 
 import java.time.LocalDate;
 public class MonitorMachinePerformanceView1 {
-
     @javafx.fxml.FXML
     private TableView<Machine> machineTableView;
     @javafx.fxml.FXML

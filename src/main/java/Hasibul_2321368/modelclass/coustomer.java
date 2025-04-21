@@ -1,4 +1,4 @@
-package Hasibul_2321368;
+package Hasibul_2321368.modelclass;
 
 public class coustomer extends user {
     private String customerId;

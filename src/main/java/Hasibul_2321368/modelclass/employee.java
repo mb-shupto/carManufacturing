@@ -1,6 +1,6 @@
-package Hasibul_2321368;
+package Hasibul_2321368.modelclass;
 
-public class employee extends user{
+public class employee extends user {
 
     private String employeeId;
     private String department;
