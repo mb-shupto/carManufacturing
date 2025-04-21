@@ -19,7 +19,7 @@
       <Button layoutX="535.0" layoutY="453.0" mnemonicParsing="false" onAction="#logOutOnAction" text="Log Out" />
       <Button layoutX="462.0" layoutY="106.0" mnemonicParsing="false" onAction="#orderMaterialsOnAction" prefHeight="26.0" prefWidth="186.0" text="Order Raw Materials" />
       <Button layoutX="462.0" layoutY="154.0" mnemonicParsing="false" onAction="#assignProductionLinesOnAction" prefHeight="26.0" prefWidth="186.0" text="Assign Production Lines" />
-      <Button layoutX="463.0" layoutY="201.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="186.0" text="Track Equipment Maintenance" />
+      <Button layoutX="463.0" layoutY="201.0" mnemonicParsing="false" onAction="#trackMaintenanceOnAction" prefHeight="26.0" prefWidth="186.0" text="Track Equipment Maintenance" />
       <Button layoutX="462.0" layoutY="249.0" mnemonicParsing="false" onAction="#reviewCostsOnAction" prefHeight="26.0" prefWidth="186.0" text="Review Production Cost" />
    </children>
 </AnchorPane>

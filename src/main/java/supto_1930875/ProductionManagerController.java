@@ -52,7 +52,7 @@ public class ProductionManagerController {
     @javafx.fxml.FXML
     public void assignShiftsOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/assignShiftss.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/manageShifts.fxml"));
             Parent root = fxmlLoader.load();
             Node source = (Node) actionEvent.getSource();
             Stage stage = (Stage) source.getScene().getWindow();
@@ -137,6 +137,22 @@ public class ProductionManagerController {
             Stage stage = (Stage) source.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Review Production Costs Dashboard");
+            stage.show();
+        }catch (IOException exception){
+            exception.printStackTrace();
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void trackMaintenanceOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/trackMaintenance.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Track Equipment Maintenance Dashboard");
             stage.show();
         }catch (IOException exception){
             exception.printStackTrace();
