@@ -1,36 +1,55 @@
 package Hasibul_2321368;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
 import java.time.LocalDate;
 public class MonitorMachinePerformanceView1 {
-    @FXML private TableView<Machine> machineTableView;
-    @FXML private TableColumn<Machine, String> MachineIDTableColumn;
-    @FXML private TableColumn<Machine, String> MachineStatusTableColumn;
-    @FXML private TableColumn<Machine, LocalDate> LastMaintenanceDateTableColumn;
-    @FXML private TableColumn<Machine, LocalDate> NextMaintenanceDueTableColumn;
-    @FXML private TableColumn<Machine, String> MachineDetailsTableColumn;
-    @FXML private TableColumn<Machine, String> ScoreTableColumn;
-    @FXML private TableColumn<Machine, String> TechnicianAssignTableColumn;
-    @FXML private TableColumn<Machine, String> MaintenanceTaskStatusTableColumn;
 
-    @FXML private TextField MachineIDTextField;
-    @FXML private TextField MachineStatusTextField;
-    @FXML private DatePicker LastMaintenanceDateDatePicker;
-    @FXML private DatePicker NextMaintenanceDueDatePicker;
-    @FXML private RadioButton GoodRadioButton;
-    @FXML private RadioButton FairRadioButton;
-    @FXML private RadioButton PoorRadioButton;
-    @FXML private TextField MachineDetailsTextField;
-    @FXML private ComboBox<String> TechnicianAssignmentComboBox;
-    @FXML private TextField EnterTaskStatusTextField;
+    @javafx.fxml.FXML
+    private TableView<Machine> machineTableView;
+    @javafx.fxml.FXML
+    private TableColumn<Machine, String> MachineIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Machine, String> MachineStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Machine, LocalDate> LastMaintenanceDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Machine, LocalDate> NextMaintenanceDueTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Machine, String> MachineDetailsTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Machine, String> ScoreTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Machine, String> TechnicianAssignTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Machine, String> MaintenanceTaskStatusTableColumn;
+
+    @javafx.fxml.FXML
+    private TextField MachineIDTextField;
+    @javafx.fxml.FXML
+    private TextField MachineStatusTextField;
+    @javafx.fxml.FXML
+    private DatePicker LastMaintenanceDateDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker NextMaintenanceDueDatePicker;
+    @javafx.fxml.FXML
+    private RadioButton GoodRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton FairRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton PoorRadioButton;
+    @javafx.fxml.FXML
+    private TextField MachineDetailsTextField;
+    @javafx.fxml.FXML
+    private ComboBox<String> TechnicianAssignmentComboBox;
+    @javafx.fxml.FXML
+    private TextField EnterTaskStatusTextField;
 
     private ObservableList<Machine> machineList = FXCollections.observableArrayList();
 
-    @FXML
+    @javafx.fxml.FXML
     private void initialize() {
         TechnicianAssignmentComboBox.getItems().addAll("Technician A", "Technician B", "Technician C");
 
@@ -46,7 +65,7 @@ public class MonitorMachinePerformanceView1 {
         machineTableView.setItems(machineList);
     }
 
-    @FXML
+    @javafx.fxml.FXML
     private void GenerateButtonOnAction(MouseEvent event) {
         if (MachineIDTextField.getText().isEmpty() || MachineStatusTextField.getText().isEmpty() ||
                 MachineDetailsTextField.getText().isEmpty() || EnterTaskStatusTextField.getText().isEmpty()) {
