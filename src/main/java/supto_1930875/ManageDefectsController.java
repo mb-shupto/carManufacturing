@@ -37,6 +37,17 @@ public class ManageDefectsController
 
     @javafx.fxml.FXML
     public void backOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/qaEngineer.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Production Manager Dashboard");
+            stage.show();
+        }catch (IOException exception){
+            exception.printStackTrace();
+        }
     }
 
 
