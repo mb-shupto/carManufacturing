@@ -100,4 +100,20 @@ public class ProductionManagerController {
             exception.printStackTrace();
         }
     }
+
+    @javafx.fxml.FXML
+    public void assignProductionLinesOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/assignLines.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Assign Production Lines Dashboard");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+    }
 }
