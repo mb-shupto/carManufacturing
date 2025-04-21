@@ -15,20 +15,6 @@ public class QaEngineerController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void backOnAction(ActionEvent actionEvent) throws IOException {
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/login.fxml"));
-            Parent root = fxmlLoader.load();
-            Node source = (Node) actionEvent.getSource();
-            Stage stage = (Stage) source.getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Login Dashboard");
-            stage.show();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
 
     @javafx.fxml.FXML
     public void testFinishedCarOnAction(ActionEvent actionEvent) {try{
@@ -150,6 +136,21 @@ public class QaEngineerController
             stage.show();
         } catch (IOException e)
         {
+            e.printStackTrace();
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void logoutOnAction(ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/login.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Login Dashboard");
+            stage.show();
+        }catch (IOException e){
             e.printStackTrace();
         }
     }
