@@ -9,32 +9,53 @@ import java.time.LocalDate;
 
 public class SMCustomerOrderManagementviewcontroller {
 
-    @FXML private TextField OrderIDTextField;
-    @FXML private TextField CustomerNameTextField;
-    @FXML private DatePicker OrderDateDatePicker;
-    @FXML private ComboBox<String> CarModelComboBox;
-    @FXML private RadioButton PendingRadioButton;
-    @FXML private RadioButton DeliveredRadioButton;
-    @FXML private RadioButton ShippedRadioButton;
-    @FXML private TextField TotalAmountTextField;
-    @FXML private RadioButton CompletedRadioButton;
-    @FXML private RadioButton FailedRadioButton;
-    @FXML private RadioButton PaymentPendingRadioButton;
-    @FXML private DatePicker DeliveryDateDatePicker;
-    @FXML private TableView<CustomerOrder> customerOrderTableView;
+    @javafx.fxml.FXML
+    private TextField OrderIDTextField;
+    @javafx.fxml.FXML
+    private TextField CustomerNameTextField;
+    @javafx.fxml.FXML
+    private DatePicker OrderDateDatePicker;
+    @javafx.fxml.FXML
+    private ComboBox<String> CarModelComboBox;
+    @javafx.fxml.FXML
+    private RadioButton PendingRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton DeliveredRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton ShippedRadioButton;
+    @javafx.fxml.FXML
+    private TextField TotalAmountTextField;
+    @javafx.fxml.FXML
+    private RadioButton CompletedRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton FailedRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton PaymentPendingRadioButton;
+    @javafx.fxml.FXML
+    private DatePicker DeliveryDateDatePicker;
+    @javafx.fxml.FXML
+    private TableView<CustomerOrder> customerOrderTableView;
 
-    @FXML private TableColumn<CustomerOrder, String> OrderIDTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> CustomerNameTableColumn;
-    @FXML private TableColumn<CustomerOrder, Double> TotalAmountTableColumn;
-    @FXML private TableColumn<CustomerOrder, LocalDate> OrderDateTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> OrderStatusTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> CarModelTableColumn;
-    @FXML private TableColumn<CustomerOrder, LocalDate> DeliveryDateTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> PaymentStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> OrderIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> CustomerNameTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, Double> TotalAmountTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, LocalDate> OrderDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> OrderStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> CarModelTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, LocalDate> DeliveryDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> PaymentStatusTableColumn;
 
     private ObservableList<CustomerOrder> customerOrderList = FXCollections.observableArrayList();
 
-    @FXML
+    @javafx.fxml.FXML
     private void initialize() {
         CarModelComboBox.getItems().addAll("Model A", "Model B", "Model C");
 
@@ -50,7 +71,7 @@ public class SMCustomerOrderManagementviewcontroller {
         customerOrderTableView.setItems(customerOrderList);
     }
 
-    @FXML
+    @javafx.fxml.FXML
     private void GenerateButtonOnAction(MouseEvent event) {
         // Validate input fields
         if (OrderIDTextField.getText().isEmpty() || CustomerNameTextField.getText().isEmpty() || TotalAmountTextField.getText().isEmpty()) {

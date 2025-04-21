@@ -6,11 +6,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hasibul_2321368.CustomerComplaintsController">
    <children>
@@ -25,7 +23,6 @@
       <Label layoutX="480.0" layoutY="304.0" text="Priority" />
       <TextField fx:id="ComplaintIDTextField" layoutX="241.0" layoutY="141.0" />
       <TextField fx:id="CustomerNameTextField" layoutX="241.0" layoutY="200.0" />
-      <TextArea fx:id="ComplaintDescriptionTextArea" layoutX="808.0" layoutY="93.0" prefHeight="200.0" prefWidth="216.0" promptText="Enter Complaint Description" />
       <ComboBox fx:id="ComplaintStatusComboBox" layoutX="261.0" layoutY="263.0" prefWidth="150.0" />
       <ComboBox fx:id="AssignedDepartmentComboBox" layoutX="513.0" layoutY="140.0" prefHeight="34.0" prefWidth="203.0" promptText="Assigned Department" />
       <DatePicker fx:id="ComplaintDateDatePicker" layoutX="172.0" layoutY="328.0" promptText="Complaint Date" />
@@ -45,5 +42,10 @@
             <TableColumn fx:id="PriorityTableColumn" prefWidth="72.45281982421875" text="Priority" />
         </columns>
       </TableView>
+      <TextField fx:id="ComplaintDescriptionTextField" layoutX="817.0" layoutY="200.0" prefHeight="34.0" prefWidth="191.0" promptText="Complaint Description">
+         <font>
+            <Font name="System Bold" size="15.39622688293457" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

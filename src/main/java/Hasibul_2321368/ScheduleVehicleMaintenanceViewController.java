@@ -2,36 +2,53 @@ package Hasibul_2321368;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import java.time.LocalDate;
 
 public class ScheduleVehicleMaintenanceViewController {
 
-    @FXML private TextField RequestIDTextField;
-    @FXML private TextField VehicleIdTextField;
-    @FXML private TextField IssueDescriptionTextField;
-    @FXML private TextField VehicleInformationTextField;
-    @FXML private DatePicker RequestDateDatePicker;
-    @FXML private DatePicker ScheduledDateDatePicker;
-    @FXML private ComboBox<String> TechnicianAssignedComboBox;
-    @FXML private ComboBox<String> TaskStatusComboBox;
-    @FXML private CheckBox SparePartsVerificationCheckBox;
-    @FXML private TableView<VehicleMaintenanceRequest> maintenanceRequestTableView;
+    @javafx.fxml.FXML
+    private TextField RequestIDTextField;
+    @javafx.fxml.FXML
+    private TextField VehicleIdTextField;
+    @javafx.fxml.FXML
+    private TextField IssueDescriptionTextField;
+    @javafx.fxml.FXML
+    private TextField VehicleInformationTextField;
+    @javafx.fxml.FXML
+    private DatePicker RequestDateDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker ScheduledDateDatePicker;
+    @javafx.fxml.FXML
+    private ComboBox<String> TechnicianAssignedComboBox;
+    @javafx.fxml.FXML
+    private ComboBox<String> TaskStatusComboBox;
+    @javafx.fxml.FXML
+    private CheckBox SparePartsVerificationCheckBox;
+    @javafx.fxml.FXML
+    private TableView<VehicleMaintenanceRequest> maintenanceRequestTableView;
 
-    @FXML private TableColumn<VehicleMaintenanceRequest, String> RequestIDTableColumn;
-    @FXML private TableColumn<VehicleMaintenanceRequest, String> VehicleIDTableColumn;
-    @FXML private TableColumn<VehicleMaintenanceRequest, String> IssueDescriptionTableColumn;
-    @FXML private TableColumn<VehicleMaintenanceRequest, String> TechnicianAssignTableColumn;
-    @FXML private TableColumn<VehicleMaintenanceRequest, String> VehicleInformationTableColumn;
-    @FXML private TableColumn<VehicleMaintenanceRequest, LocalDate> RequestDateTableColumn;
-    @FXML private TableColumn<VehicleMaintenanceRequest, LocalDate> ScheduledDateTableColumn;
-    @FXML private TableColumn<VehicleMaintenanceRequest, String> TaskStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenanceRequest, String> RequestIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenanceRequest, String> VehicleIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenanceRequest, String> IssueDescriptionTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenanceRequest, String> TechnicianAssignTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenanceRequest, String> VehicleInformationTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenanceRequest, LocalDate> RequestDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenanceRequest, LocalDate> ScheduledDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenanceRequest, String> TaskStatusTableColumn;
 
     private ObservableList<VehicleMaintenanceRequest> maintenanceRequestList = FXCollections.observableArrayList();
 
-    @FXML
+    @javafx.fxml.FXML
     private void initialize() {
         // Initialize ComboBoxes with options
         TechnicianAssignedComboBox.getItems().addAll("Ariyen", "Joti", "Asif", "Abir");
@@ -50,7 +67,7 @@ public class ScheduleVehicleMaintenanceViewController {
         maintenanceRequestTableView.setItems(maintenanceRequestList);
     }
 
-    @FXML
+    @javafx.fxml.FXML
     private void ConfirmButtonOnAction(MouseEvent event) {
         // Validate input fields
         if (RequestIDTextField.getText().isEmpty() || VehicleIdTextField.getText().isEmpty() || IssueDescriptionTextField.getText().isEmpty()) {
@@ -77,7 +94,7 @@ public class ScheduleVehicleMaintenanceViewController {
         maintenanceRequestList.add(request);
     }
 
-    @FXML
+    @javafx.fxml.FXML
     private void CancelButtonOnAction(MouseEvent event) {
         // Clear all fields
         RequestIDTextField.clear();

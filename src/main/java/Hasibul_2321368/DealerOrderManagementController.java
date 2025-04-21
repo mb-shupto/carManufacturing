@@ -2,39 +2,59 @@ package Hasibul_2321368;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import java.time.LocalDate;
 
 public class DealerOrderManagementController {
 
-    @FXML private TextField OrderIDTextField;
-    @FXML private TextField DealerNameTextField;
-    @FXML private TextField CarModelTextField;
-    @FXML private DatePicker OrderDateDatePicker;
-    @FXML private RadioButton PendingRadioButton;
-    @FXML private RadioButton RejectedRadioButton;
-    @FXML private RadioButton ApprovedRadioButton;
-    @FXML private TextField QuantityOrderedTextField;
-    @FXML private TextField PricePerUnitTextField;
-    @FXML private DatePicker DeliveryDateDatePicker;
-    @FXML private TextField TotalAmountTextField;
-    @FXML private TableView<DealerOrder> dealerOrderTableView;
+    @javafx.fxml.FXML
+    private TextField OrderIDTextField;
+    @javafx.fxml.FXML
+    private TextField DealerNameTextField;
+    @javafx.fxml.FXML
+    private TextField CarModelTextField;
+    @javafx.fxml.FXML
+    private DatePicker OrderDateDatePicker;
+    @javafx.fxml.FXML
+    private RadioButton PendingRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton RejectedRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton ApprovedRadioButton;
+    @javafx.fxml.FXML
+    private TextField QuantityOrderedTextField;
+    @javafx.fxml.FXML
+    private TextField PricePerUnitTextField;
+    @javafx.fxml.FXML
+    private DatePicker DeliveryDateDatePicker;
+    @javafx.fxml.FXML
+    private TextField TotalAmountTextField;
+    @javafx.fxml.FXML
+    private TableView<DealerOrder> dealerOrderTableView;
 
-    @FXML private TableColumn<DealerOrder, String> OrderIDTableColumn;
-    @FXML private TableColumn<DealerOrder, String> DealerNameTableColumn;
-    @FXML private TableColumn<DealerOrder, String> CarModelTableColumn;
-    @FXML private TableColumn<DealerOrder, LocalDate> OrderDateTableColumn;
-    @FXML private TableColumn<DealerOrder, Integer> QuantityOrderedTableColumn;
-    @FXML private TableColumn<DealerOrder, Double> PricePerUnitTableColumn;
-    @FXML private TableColumn<DealerOrder, String> OrderStatusTableColumn;
-    @FXML private TableColumn<DealerOrder, Double> TotalAmountTableColumn;
-    @FXML private TableColumn<DealerOrder, LocalDate> DeliveryDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<DealerOrder, String> OrderIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<DealerOrder, String> DealerNameTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<DealerOrder, String> CarModelTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<DealerOrder, LocalDate> OrderDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<DealerOrder, Integer> QuantityOrderedTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<DealerOrder, Double> PricePerUnitTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<DealerOrder, String> OrderStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<DealerOrder, Double> TotalAmountTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<DealerOrder, LocalDate> DeliveryDateTableColumn;
 
     private ObservableList<DealerOrder> dealerOrderList = FXCollections.observableArrayList();
 
-    @FXML
+    @javafx.fxml.FXML
     private void initialize() {
         OrderIDTableColumn.setCellValueFactory(cellData -> cellData.getValue().orderIDProperty());
         DealerNameTableColumn.setCellValueFactory(cellData -> cellData.getValue().dealerNameProperty());
@@ -49,7 +69,7 @@ public class DealerOrderManagementController {
         dealerOrderTableView.setItems(dealerOrderList);
     }
 
-    @FXML
+    @javafx.fxml.FXML
     private void GenerateButtonOnAction(MouseEvent event) {
         if (OrderIDTextField.getText().isEmpty() || DealerNameTextField.getText().isEmpty() || CarModelTextField.getText().isEmpty()) {
             showAlert("Error", "Please fill all the required fields.");
@@ -72,7 +92,7 @@ public class DealerOrderManagementController {
         dealerOrderList.add(order);
     }
 
-    @FXML
+    @javafx.fxml.FXML
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);

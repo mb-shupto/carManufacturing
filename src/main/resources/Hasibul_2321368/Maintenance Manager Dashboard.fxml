@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="408.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hasibul_2321368.MaintenanceManagerDashboardController">
+   <children>
+      <Label layoutX="230.0" layoutY="20.0" text="Maintenance Engineer">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="128.0" layoutY="96.0" mnemonicParsing="false" onAction="#ScheduleVehicleMaintenanceOnAction" text="Schedule Vehicle Maintenance" />
+      <Button layoutX="128.0" layoutY="146.0" mnemonicParsing="false" onAction="#MonitorMachinePerformanceOnActionButton" text="Monitor Machine Performance" />
+      <Button layoutX="128.0" layoutY="196.0" mnemonicParsing="false" text="Track Spare Parts Inventory" />
+      <Button layoutX="128.0" layoutY="246.0" mnemonicParsing="false" text="Handle Emergency Repairs" />
+      <Button layoutX="408.0" layoutY="96.0" mnemonicParsing="false" text="Improve Maintenance Efficiency" />
+      <Button layoutX="408.0" layoutY="146.0" mnemonicParsing="false" text="Monitor Spare Parts Inventory" />
+      <Button layoutX="408.0" layoutY="196.0" mnemonicParsing="false" text="Assign Technicians to Tasks" />
+   </children>
+</AnchorPane>
