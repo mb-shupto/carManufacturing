@@ -51,6 +51,17 @@ public class ProductionManagerController {
 
     @javafx.fxml.FXML
     public void assignShiftsOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/assignShiftss.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Order Material Dashboard");
+            stage.show();
+        }catch (IOException exception){
+            exception.printStackTrace();
+        }
     }
 
     @javafx.fxml.FXML
@@ -114,6 +125,21 @@ public class ProductionManagerController {
         } catch (IOException e) {
             e.printStackTrace();
 
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void reviewCostsOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/reviewCosts.fxml"));
+            Parent root = fxmlLoader.load();
+            Node source = (Node) actionEvent.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Review Production Costs Dashboard");
+            stage.show();
+        }catch (IOException exception){
+            exception.printStackTrace();
         }
     }
 }
