@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supto_1930875.InspectComponentsController">
+    <children>
+        <!-- Title -->
+        <Label layoutX="215.0" layoutY="26.0" text="Inspect Car Components">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <!-- Component selection -->
+        <Label layoutX="104.0" layoutY="110.0" text="Select Component:" />
+        <ComboBox fx:id="componentComboBox" layoutX="216.0" layoutY="106.0" prefHeight="26.0" prefWidth="214.0" promptText="Choose a Component" />
+
+        <!-- Inspection result selection -->
+        <Label layoutX="108.0" layoutY="148.0" text="Inspection Result:" />
+        <ComboBox fx:id="resultComboBox" layoutX="216.0" layoutY="144.0" prefHeight="26.0" prefWidth="213.0" promptText="Choose a Result" />
+
+        <!-- Record Inspection button -->
+        <Button layoutX="189.0" layoutY="189.0" onAction="#recordInspectionOnAction" text="Record Inspection" />
+
+        <!-- Output TextArea -->
+        <TextArea fx:id="outputTextArea" editable="false" layoutX="53.0" layoutY="240.0" prefHeight="206.0" prefWidth="553.0" />
+
+        <!-- Back button -->
+        <Button layoutX="566.0" layoutY="474.0" onAction="#backOnAction" text="Back" />
+      <Label fx:id="outputLabel" layoutX="301.0" layoutY="65.0" prefHeight="30.0" prefWidth="348.0" />
+      <Button layoutX="53.0" layoutY="474.0" mnemonicParsing="false" onAction="#viewInspectionOnAction" prefHeight="26.0" prefWidth="101.0" text="View Inspection" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="supto_1930875.ViewInspectionsController">
+    <children>
+        <!-- Title -->
+        <Label layoutX="200.0" layoutY="20.0" text="View Inspection Results">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+
+        <!-- TextArea to display inspection results -->
+        <TextArea fx:id="inspectionTextArea" layoutX="30.0" layoutY="60.0" prefHeight="200.0" prefWidth="600.0" editable="false"/>
+
+        <!-- Back button -->
+        <Button layoutX="570.0" layoutY="460.0" text="Back" onAction="#backOnAction"/>
+    </children>
+</AnchorPane>
