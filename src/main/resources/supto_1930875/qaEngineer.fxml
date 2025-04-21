@@ -20,6 +20,6 @@
       <Button layoutX="412.0" layoutY="207.0" mnemonicParsing="false" onAction="#updateQualityStandardsOnAction" prefHeight="26.0" prefWidth="173.0" text="Update Quality Standards" />
       <Button layoutX="412.0" layoutY="152.0" mnemonicParsing="false" onAction="#analyzeDefectOnAction" prefHeight="26.0" prefWidth="173.0" text="Analyze Defect Trends" />
       <Button layoutX="412.0" layoutY="98.0" mnemonicParsing="false" onAction="#approveProductionBatchOnAction" prefHeight="26.0" prefWidth="173.0" text="Approve Production Batches" />
-      <Button layoutX="526.0" layoutY="420.0" mnemonicParsing="false" onAction="#backOnAction" text="Back" />
+      <Button layoutX="526.0" layoutY="420.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Log Out" />
    </children>
 </AnchorPane>
