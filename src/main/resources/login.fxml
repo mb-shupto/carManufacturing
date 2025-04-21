@@ -14,7 +14,7 @@
             <Font name="Arial Black" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="88.0" layoutY="163.0" text="common.User:" />
+      <Label layoutX="88.0" layoutY="163.0" text="User:" />
       <Label layoutX="87.0" layoutY="219.0" text="Password:" />
       <ComboBox fx:id="userComboBox" layoutX="187.0" layoutY="159.0" prefHeight="26.0" prefWidth="281.0" promptText="Select a User" />
       <PasswordField fx:id="passwordField" layoutX="187.0" layoutY="215.0" prefHeight="26.0" prefWidth="282.0" promptText="Enter Your Password Here" />
