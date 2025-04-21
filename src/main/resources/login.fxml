@@ -19,6 +19,6 @@
       <ComboBox fx:id="userComboBox" layoutX="187.0" layoutY="159.0" prefHeight="26.0" prefWidth="281.0" promptText="Select a User" />
       <PasswordField fx:id="passwordField" layoutX="187.0" layoutY="215.0" prefHeight="26.0" prefWidth="282.0" promptText="Enter Your Password Here" />
       <Button layoutX="277.0" layoutY="274.0" mnemonicParsing="false" onAction="#loginOnAction" text="Login" />
-      <Label fx:id="outputLabel" layoutX="60.0" layoutY="396.0" />
+      <Label fx:id="outputLabel" layoutX="60.0" layoutY="396.0" prefHeight="42.0" prefWidth="418.0" />
    </children>
 </AnchorPane>
