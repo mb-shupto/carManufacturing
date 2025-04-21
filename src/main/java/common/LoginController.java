@@ -73,7 +73,7 @@ public class LoginController {
                 outputLabel.setText("Error loading the dashboard: " + e.getMessage());
             }
         } else {
-            outputLabel.setText("Invalid username or password.");
+            outputLabel.setText("Invalid user or password.");
         }
     }
 }
