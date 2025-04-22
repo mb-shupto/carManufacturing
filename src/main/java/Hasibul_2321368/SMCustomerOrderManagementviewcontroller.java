@@ -9,33 +9,54 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class SMCustomerOrderManagementViewController {
 
-    @FXML private TextField OrderIDTextField;
-    @FXML private TextField CustomerNameTextField;
-    @FXML private ComboBox<String> CarModelComboBox;
-    @FXML private DatePicker OrderDateDatePicker;
-    @FXML private DatePicker DeliveryDateDatePicker;
-    @FXML private TextField TotalAmountTextField;
-    @FXML private RadioButton PendingRadioButton;
-    @FXML private RadioButton DeliveredRadioButton;
-    @FXML private RadioButton ShippedRadioButton;
-    @FXML private RadioButton CompletedRadioButton;
-    @FXML private RadioButton FailedRadioButton;
-    @FXML private RadioButton PendingPaymentRadioButton;
+    @javafx.fxml.FXML
+    private TextField OrderIDTextField;
+    @javafx.fxml.FXML
+    private TextField CustomerNameTextField;
+    @javafx.fxml.FXML
+    private ComboBox<String> CarModelComboBox;
+    @javafx.fxml.FXML
+    private DatePicker OrderDateDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker DeliveryDateDatePicker;
+    @javafx.fxml.FXML
+    private TextField TotalAmountTextField;
+    @javafx.fxml.FXML
+    private RadioButton PendingRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton DeliveredRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton ShippedRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton CompletedRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton FailedRadioButton;
+    @javafx.fxml.FXML
+    private RadioButton PendingPaymentRadioButton;
 
-    @FXML private TableView<CustomerOrder> orderTableView;
-    @FXML private TableColumn<CustomerOrder, String> OrderIDTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> CustomerNameTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> TotalAmountTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> OrderDateTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> OrderStatusTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> CarModelTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> DeliveryDateTableColumn;
-    @FXML private TableColumn<CustomerOrder, String> PaymentStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableView<CustomerOrder> orderTableView;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> OrderIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> CustomerNameTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> TotalAmountTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> OrderDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> OrderStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> CarModelTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> DeliveryDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerOrder, String> PaymentStatusTableColumn;
 
     // Observable list for storing customer orders
     private ObservableList<CustomerOrder> orderList = FXCollections.observableArrayList();
 
-    @FXML
+    @javafx.fxml.FXML
     public void initialize() {
         // Initialize ComboBox with car models
         CarModelComboBox.getItems().addAll("Model A", "Model B", "Model C", "Model D");
@@ -54,7 +75,7 @@ public class SMCustomerOrderManagementViewController {
         orderTableView.setItems(orderList);
     }
 
-    @FXML
+    @javafx.fxml.FXML
     private void GenerateButtonOnAction() {
         // Get values from the input fields
         String orderID = OrderIDTextField.getText();

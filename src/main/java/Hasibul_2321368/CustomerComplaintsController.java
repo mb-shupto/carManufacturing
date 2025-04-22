@@ -10,29 +10,46 @@ import java.time.format.DateTimeFormatter;
 
 public class CustomerComplaintsController {
 
-    @FXML private TextField ComplaintIDTextField;
-    @FXML private TextField CustomerNameTextField;
-    @FXML private TextField ComplaintDescriptionTextField;
-    @FXML private ComboBox<String> ComplaintStatusComboBox;
-    @FXML private ComboBox<String> AssignedDepartmentComboBox;
-    @FXML private ComboBox<String> PriorityComboBox;
-    @FXML private DatePicker ComplaintDateDatePicker;
-    @FXML private DatePicker ResolutionDeadlineDatePicker;
+    @javafx.fxml.FXML
+    private TextField ComplaintIDTextField;
+    @javafx.fxml.FXML
+    private TextField CustomerNameTextField;
+    @javafx.fxml.FXML
+    private TextField ComplaintDescriptionTextField;
+    @javafx.fxml.FXML
+    private ComboBox<String> ComplaintStatusComboBox;
+    @javafx.fxml.FXML
+    private ComboBox<String> AssignedDepartmentComboBox;
+    @javafx.fxml.FXML
+    private ComboBox<String> PriorityComboBox;
+    @javafx.fxml.FXML
+    private DatePicker ComplaintDateDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker ResolutionDeadlineDatePicker;
 
-    @FXML private TableView<CustomerComplaint> complaintTableView;
-    @FXML private TableColumn<CustomerComplaint, String> ComplaintIDTableColumn;
-    @FXML private TableColumn<CustomerComplaint, String> CustomerNameTableColumn;
-    @FXML private TableColumn<CustomerComplaint, String> ComplaintStatusTableColumn;
-    @FXML private TableColumn<CustomerComplaint, String> AssignedDepartmentTableColumn;
-    @FXML private TableColumn<CustomerComplaint, String> ComplaintDescriptionTableColumn;
-    @FXML private TableColumn<CustomerComplaint, String> ComplaintDatetableColumn;
-    @FXML private TableColumn<CustomerComplaint, String> ResolutionDeadlineTableColumn;
-    @FXML private TableColumn<CustomerComplaint, String> PriorityTableColumn;
+    @javafx.fxml.FXML
+    private TableView<CustomerComplaint> complaintTableView;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerComplaint, String> ComplaintIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerComplaint, String> CustomerNameTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerComplaint, String> ComplaintStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerComplaint, String> AssignedDepartmentTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerComplaint, String> ComplaintDescriptionTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerComplaint, String> ComplaintDatetableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerComplaint, String> ResolutionDeadlineTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<CustomerComplaint, String> PriorityTableColumn;
 
     // Observable list for storing customer complaints
     private ObservableList<CustomerComplaint> complaintList = FXCollections.observableArrayList();
 
-    @FXML
+    @javafx.fxml.FXML
     public void initialize() {
         // Initialize ComboBoxes
         ComplaintStatusComboBox.getItems().addAll("Pending", "Resolved", "In Progress");
@@ -56,7 +73,7 @@ public class CustomerComplaintsController {
     }
 
     // Confirm button action: Add a new complaint to the table
-    @FXML
+    @javafx.fxml.FXML
     private void ConfirmButtonOnAction() {
         String complaintID = ComplaintIDTextField.getText();
         String customerName = CustomerNameTextField.getText();
@@ -89,7 +106,7 @@ public class CustomerComplaintsController {
     }
 
     // Cancel button action: Clear input fields
-    @FXML
+    @javafx.fxml.FXML
     private void CancelButtonOnAction(MouseEvent event) {
         ComplaintIDTextField.clear();
         CustomerNameTextField.clear();

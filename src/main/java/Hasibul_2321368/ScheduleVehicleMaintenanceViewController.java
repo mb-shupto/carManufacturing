@@ -9,36 +9,56 @@ import java.time.format.DateTimeFormatter;
 
 public class ScheduleVehicleMaintenanceViewController {
 
-    @FXML private TextField RequestIDTextField;
-    @FXML private TextField VehicleIdTextField;
-    @FXML private TextField IssueDescriptionTextField;
-    @FXML private TextField VehicleInformationTextField;
+    @javafx.fxml.FXML
+    private TextField RequestIDTextField;
+    @javafx.fxml.FXML
+    private TextField VehicleIdTextField;
+    @javafx.fxml.FXML
+    private TextField IssueDescriptionTextField;
+    @javafx.fxml.FXML
+    private TextField VehicleInformationTextField;
 
-    @FXML private DatePicker RequestDateDatePicker;
-    @FXML private DatePicker ScheduledDateDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker RequestDateDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker ScheduledDateDatePicker;
 
-    @FXML private ComboBox<String> TechnicianAssignedComboBox;
-    @FXML private ComboBox<String> TaskStatusComboBox;
+    @javafx.fxml.FXML
+    private ComboBox<String> TechnicianAssignedComboBox;
+    @javafx.fxml.FXML
+    private ComboBox<String> TaskStatusComboBox;
 
-    @FXML private CheckBox SparePartsVerificationCheckBox;
+    @javafx.fxml.FXML
+    private CheckBox SparePartsVerificationCheckBox;
 
-    @FXML private Button ConfirmButton;
-    @FXML private Button CancelButton;
+    @javafx.fxml.FXML
+    private Button ConfirmButton;
+    @javafx.fxml.FXML
+    private Button CancelButton;
 
-    @FXML private TableView<VehicleMaintenance> maintenanceTableView;
-    @FXML private TableColumn<VehicleMaintenance, String> RequestIDTableColumn;
-    @FXML private TableColumn<VehicleMaintenance, String> VehicleIDTableColumn;
-    @FXML private TableColumn<VehicleMaintenance, String> IssueDescriptionTableColumn;
-    @FXML private TableColumn<VehicleMaintenance, String> TechnicianAssignTableColumn;
-    @FXML private TableColumn<VehicleMaintenance, String> VehicleInformationTableColumn;
-    @FXML private TableColumn<VehicleMaintenance, String> RequestDateTableColumn;
-    @FXML private TableColumn<VehicleMaintenance, String> ScheduledDateTableColumn;
-    @FXML private TableColumn<VehicleMaintenance, String> TaskStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableView<VehicleMaintenance> maintenanceTableView;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenance, String> RequestIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenance, String> VehicleIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenance, String> IssueDescriptionTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenance, String> TechnicianAssignTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenance, String> VehicleInformationTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenance, String> RequestDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenance, String> ScheduledDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<VehicleMaintenance, String> TaskStatusTableColumn;
 
     // Observable list for storing vehicle maintenance data
     private ObservableList<VehicleMaintenance> maintenanceList = FXCollections.observableArrayList();
 
-    @FXML
+    @javafx.fxml.FXML
     public void initialize() {
         // Set up TableView columns with appropriate cell value factories
         RequestIDTableColumn.setCellValueFactory(cellData -> cellData.getValue().requestIDProperty());
@@ -59,7 +79,7 @@ public class ScheduleVehicleMaintenanceViewController {
     }
 
     // Confirm button action: Add a new vehicle maintenance record
-    @FXML
+    @javafx.fxml.FXML
     private void ConfirmButtonOnAction() {
         String requestID = RequestIDTextField.getText();
         String vehicleID = VehicleIdTextField.getText();
@@ -93,7 +113,7 @@ public class ScheduleVehicleMaintenanceViewController {
     }
 
     // Cancel button action: Clear input fields
-    @FXML
+    @javafx.fxml.FXML
     private void CancelButtonOnAction() {
         RequestIDTextField.clear();
         VehicleIdTextField.clear();
