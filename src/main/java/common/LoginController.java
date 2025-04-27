@@ -54,7 +54,15 @@ public class LoginController {
             } else if (username.equals("QA Engineer")) {
                 fxmlFile = "qaEngineer.fxml";
                 title = "QA Engineer Dashboard";
-            } else {
+            } else if (username.equals("Sales Manager")){
+                fxmlFile = "Sales Manager Dashboard.fxml";
+                title = "Sales Manager Dashboard";
+            } else if (username.equals("Maintenance Manager")){
+                fxmlFile = "Maintenance Manager Dashboard.fxml";
+                title = "Maintenance Manager Dashboard";
+            }
+
+            else {
                 outputLabel.setText("Error: Unknown user role.");
                 return;
             }

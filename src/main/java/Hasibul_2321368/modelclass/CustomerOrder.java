@@ -5,120 +5,90 @@ import java.time.LocalDate;
 
 public class CustomerOrder {
 
-    private final SimpleStringProperty orderID;
-    private final SimpleStringProperty customerName;
-    private final SimpleObjectProperty<LocalDate> orderDate;
-    private final SimpleDoubleProperty totalAmount;
-    private final SimpleStringProperty orderStatus;
-    private final SimpleStringProperty carModel;
-    private final SimpleObjectProperty<LocalDate> deliveryDate;
-    private final SimpleStringProperty paymentStatus;
+    private String orderID;
+    private String customerName;
+    private String totalAmount;
+    private String orderStatus;
+    private String paymentStatus;
+    private String carModel;
+    private String orderDate;
+    private String deliveryDate;
 
-    public CustomerOrder(String orderID, String customerName, LocalDate orderDate, double totalAmount,
-                         String orderStatus, String carModel, LocalDate deliveryDate, String paymentStatus) {
-        this.orderID = new SimpleStringProperty(orderID);
-        this.customerName = new SimpleStringProperty(customerName);
-        this.orderDate = new SimpleObjectProperty<>(orderDate);
-        this.totalAmount = new SimpleDoubleProperty(totalAmount);
-        this.orderStatus = new SimpleStringProperty(orderStatus);
-        this.carModel = new SimpleStringProperty(carModel);
-        this.deliveryDate = new SimpleObjectProperty<>(deliveryDate);
-        this.paymentStatus = new SimpleStringProperty(paymentStatus);
+    // Constructors
+    public CustomerOrder(String orderID, String customerName, String totalAmount, String orderStatus,
+                         String paymentStatus, String carModel, String orderDate, String deliveryDate) {
+        this.orderID = orderID;
+        this.customerName = customerName;
+        this.totalAmount = totalAmount;
+        this.orderStatus = orderStatus;
+        this.paymentStatus = paymentStatus;
+        this.carModel = carModel;
+        this.orderDate = orderDate;
+        this.deliveryDate = deliveryDate;
     }
 
+    // Getters and Setters
     public String getOrderID() {
-        return orderID.get();
-    }
-
-    public void setOrderID(String orderID) {
-        this.orderID.set(orderID);
-    }
-
-    public String getCustomerName() {
-        return customerName.get();
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName.set(customerName);
-    }
-
-    public LocalDate getOrderDate() {
-        return orderDate.get();
-    }
-
-    public void setOrderDate(LocalDate orderDate) {
-        this.orderDate.set(orderDate);
-    }
-
-    public double getTotalAmount() {
-        return totalAmount.get();
-    }
-
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount.set(totalAmount);
-    }
-
-    public String getOrderStatus() {
-        return orderStatus.get();
-    }
-
-    public void setOrderStatus(String orderStatus) {
-        this.orderStatus.set(orderStatus);
-    }
-
-    public String getCarModel() {
-        return carModel.get();
-    }
-
-    public void setCarModel(String carModel) {
-        this.carModel.set(carModel);
-    }
-
-    public LocalDate getDeliveryDate() {
-        return deliveryDate.get();
-    }
-
-    public void setDeliveryDate(LocalDate deliveryDate) {
-        this.deliveryDate.set(deliveryDate);
-    }
-
-    public String getPaymentStatus() {
-        return paymentStatus.get();
-    }
-
-    public void setPaymentStatus(String paymentStatus) {
-        this.paymentStatus.set(paymentStatus);
-    }
-
-    public SimpleStringProperty orderIDProperty() {
         return orderID;
     }
 
-    public SimpleStringProperty customerNameProperty() {
+    public void setOrderID(String orderID) {
+        this.orderID = orderID;
+    }
+
+    public String getCustomerName() {
         return customerName;
     }
 
-    public SimpleObjectProperty<LocalDate> orderDateProperty() {
-        return orderDate;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
-    public SimpleDoubleProperty totalAmountProperty() {
+    public String getTotalAmount() {
         return totalAmount;
     }
 
-    public SimpleStringProperty orderStatusProperty() {
+    public void setTotalAmount(String totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public String getOrderStatus() {
         return orderStatus;
     }
 
-    public SimpleStringProperty carModelProperty() {
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public String getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
+    }
+
+    public String getCarModel() {
         return carModel;
     }
 
-    public SimpleObjectProperty<LocalDate> deliveryDateProperty() {
+    public void setCarModel(String carModel) {
+        this.carModel = carModel;
+    }
+
+    public String getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public String getDeliveryDate() {
         return deliveryDate;
     }
 
-    public SimpleStringProperty paymentStatusProperty() {
-        return paymentStatus;
+    public void setDeliveryDate(String deliveryDate) {
+        this.deliveryDate = deliveryDate;
     }
 }
