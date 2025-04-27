@@ -12,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class LoginController {
     @FXML
@@ -45,31 +46,42 @@ public class LoginController {
         if (userManager.validateLogin(username, password)) {
             outputLabel.setText("Login successful!");
 
-            // Determine the dashboard based on the user role
+            // Determine the dashboard and FXML path based on the user role
             String fxmlFile;
             String title;
+            String fxmlPathPrefix;
             if (username.equals("Production Manager")) {
                 fxmlFile = "productionManager.fxml";
                 title = "Production Manager Dashboard";
+                fxmlPathPrefix = "/supto_1930875/";
             } else if (username.equals("QA Engineer")) {
                 fxmlFile = "qaEngineer.fxml";
                 title = "QA Engineer Dashboard";
-            } else if (username.equals("Sales Manager")){
+                fxmlPathPrefix = "/supto_1930875/";
+            } else if (username.equals("Sales Manager")) {
                 fxmlFile = "Sales Manager Dashboard.fxml";
                 title = "Sales Manager Dashboard";
-            } else if (username.equals("Maintenance Manager")){
+                fxmlPathPrefix = "/Hasibul_2321368/";
+            } else if (username.equals("Maintenance Manager")) {
                 fxmlFile = "Maintenance Manager Dashboard.fxml";
                 title = "Maintenance Manager Dashboard";
-            }
-
-            else {
+                fxmlPathPrefix = "/Hasibul_2321368/";
+            } else {
                 outputLabel.setText("Error: Unknown user role.");
                 return;
             }
 
             // Navigate to the appropriate dashboard
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/supto_1930875/" + fxmlFile));
+                // Debug the resource path
+                String fxmlPath = fxmlPathPrefix + fxmlFile;
+                URL resourceUrl = getClass().getResource(fxmlPath);
+                if (resourceUrl == null) {
+                    outputLabel.setText("Error: FXML file not found at " + fxmlPath);
+                    return;
+                }
+
+                FXMLLoader fxmlLoader = new FXMLLoader(resourceUrl);
                 Parent root = fxmlLoader.load();
                 Node source = (Node) actionEvent.getSource();
                 Stage stage = (Stage) source.getScene().getWindow();
