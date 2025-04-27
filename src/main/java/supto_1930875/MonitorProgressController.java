@@ -104,9 +104,22 @@ public class MonitorProgressController {
                 }
             }
 
-            // Refresh the TableView
+            // If progress is 100%, update the corresponding bottleneck status to "Completed"
+            if (progressValue == 100) {
+                for (Bottleneck bottleneck : bottleneckList) {
+                    if (bottleneck.getBottleneckName().equals(selectedTask)) {
+                        bottleneck.setStatus("Completed");
+                        break;
+                    }
+                }
+                bottleneckStatusTableView.getItems().setAll(bottleneckList);
+                updateOutputLabel.setText("Progress updated for " + selectedTask + ": " + progressValue + "%. Bottleneck status set to Completed.");
+            } else {
+                updateOutputLabel.setText("Progress updated for " + selectedTask + ": " + progressValue + "%");
+            }
+
+            // Refresh the Task TableView
             taskProgressTableView.getItems().setAll(taskList);
-            updateOutputLabel.setText("Progress updated for " + selectedTask + ": " + progressValue + "%");
         } catch (NumberFormatException e) {
             updateOutputLabel.setText("Invalid progress value. Please enter a number (e.g., 75).");
         }
