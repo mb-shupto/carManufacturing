@@ -8,7 +8,7 @@ public class UserManager {
             new User("Production Manager", "1234"),
             new User("QA Engineer", "1122"),
             new User("Sales Manager", "1111"),
-            new User("Maintenance Manager", "1111")
+            new User("Maintenance Manager", "1212")
     );
 
     // Check if username and password match any user
