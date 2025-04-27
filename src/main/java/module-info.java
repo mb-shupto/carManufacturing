@@ -7,5 +7,6 @@ module oop.project.carmanufacturing {
     opens common to javafx.fxml;
     opens supto_1930875 to javafx.fxml;
 
+    exports supto_1930875;
     exports common;
 }
