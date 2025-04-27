@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="anamika_2220139.UpdateInventoryController">
+
+    <Label layoutX="250.0" layoutY="30.0" text="Update Inventory Levels">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+
+    <TableView fx:id="materialsTableView" layoutX="50.0" layoutY="80.0" prefHeight="300.0" prefWidth="250.0">
+        <columns>
+            <TableColumn fx:id="materialNameColumn" prefWidth="125.0" text="Material" />
+            <TableColumn fx:id="quantityColumn" prefWidth="125.0" text="Quantity" />
+        </columns>
+    </TableView>
+
+    <Label layoutX="350.0" layoutY="100.0" text="Selected Material:" />
+    <Label fx:id="selectedMaterialLabel" layoutX="460.0" layoutY="100.0" />
+
+    <Label layoutX="350.0" layoutY="140.0" text="Quantity Received:" />
+    <TextField fx:id="quantityField" layoutX="460.0" layoutY="140.0" prefWidth="100.0" />
+
+    <Label layoutX="350.0" layoutY="180.0" text="Quality Assessment:" />
+    <TextField fx:id="qualityField" layoutX="460.0" layoutY="180.0" prefWidth="200.0" />
+
+    <Button layoutX="350.0" layoutY="230.0" mnemonicParsing="false" onAction="#verifyOnAction" text="Verify" />
+
+    <Button disable="true" layoutX="460.0" layoutY="230.0" mnemonicParsing="false" onAction="#updateInventoryLevelsOnAction" text="Update Inventory" />
+
+    <Button layoutX="580.0" layoutY="420.0" mnemonicParsing="false" onAction="#backOnAction" text="Back to Dashboard" />
+</AnchorPane>

@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import java.time.format.DateTimeFormatter;
 
@@ -58,8 +59,9 @@ public class CustomerComplaintsController {
 
         // Set up TableView columns
 
-        ComplaintIDTableColumn.setCellValueFactory(cellData -> cellData.getValue().complaintIDProperty());
-        ComplaintIDTableColumn.setCellValueFactory(cellData -> cellData.getValue().complaintIDProperty());
+        ComplaintIDTableColumn.setCellValueFactory(new PropertyValueFactory<>("comID"));
+        ComplaintIDTableColumn.setCellValueFactory(new PropertyValueFactory<>("comIDTable"));
+
         CustomerNameTableColumn.setCellValueFactory(cellData -> cellData.getValue().customerNameProperty());
         ComplaintStatusTableColumn.setCellValueFactory(cellData -> cellData.getValue().complaintStatusProperty());
         AssignedDepartmentTableColumn.setCellValueFactory(cellData -> cellData.getValue().assignedDepartmentProperty());

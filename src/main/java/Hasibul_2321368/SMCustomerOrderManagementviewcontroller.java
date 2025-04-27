@@ -1,110 +1,97 @@
 package Hasibul_2321368;
 
 import Hasibul_2321368.modelclass.CustomerOrder;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.input.MouseEvent;
 
-public class SMCustomerOrderManagementViewController {
+public class SMCustomerOrderManagementviewcontroller {
 
-    @javafx.fxml.FXML
-    private TextField OrderIDTextField;
-    @javafx.fxml.FXML
-    private TextField CustomerNameTextField;
-    @javafx.fxml.FXML
-    private ComboBox<String> CarModelComboBox;
-    @javafx.fxml.FXML
-    private DatePicker OrderDateDatePicker;
-    @javafx.fxml.FXML
-    private DatePicker DeliveryDateDatePicker;
-    @javafx.fxml.FXML
-    private TextField TotalAmountTextField;
-    @javafx.fxml.FXML
-    private RadioButton PendingRadioButton;
-    @javafx.fxml.FXML
-    private RadioButton DeliveredRadioButton;
-    @javafx.fxml.FXML
-    private RadioButton ShippedRadioButton;
-    @javafx.fxml.FXML
-    private RadioButton CompletedRadioButton;
-    @javafx.fxml.FXML
-    private RadioButton FailedRadioButton;
-    @javafx.fxml.FXML
-    private RadioButton PendingPaymentRadioButton;
+    // FXML components from the form
+    @FXML private TextField OrderIDTextField;
+    @FXML private TextField CustomerNameTextField;
+    @FXML private TextField TotalAmountTextField;
+    @FXML private ComboBox<String> CarModelComboBox;
+    @FXML private DatePicker OrderDateDatePicker;
+    @FXML private DatePicker DeliveryDateDatePicker;
+    @FXML private RadioButton PendingRadioButton;
+    @FXML private RadioButton DeliveredRadioButton;
+    @FXML private RadioButton ShippedRadioButton;
+    @FXML private RadioButton CompletedRadioButton;
+    @FXML private RadioButton FailedRadioButton;
+    @FXML private RadioButton PendingPaymentRadioButton;
+    @FXML private TableView<CustomerOrder> tableView;
+    @FXML private TableColumn<CustomerOrder, String> OrderIDTableColumn;
+    @FXML private TableColumn<CustomerOrder, String> CustomerNameTableColumn;
+    @FXML private TableColumn<CustomerOrder, String> TotalAmountTableColumn;
+    @FXML private TableColumn<CustomerOrder, String> OrderDateTableColumn;
+    @FXML private TableColumn<CustomerOrder, String> OrderStatusTableColumn;
+    @FXML private TableColumn<CustomerOrder, String> CarModelTableColumn;
+    @FXML private TableColumn<CustomerOrder, String> DeliveryDateTableColumn;
+    @FXML private TableColumn<CustomerOrder, String> PaymentStatusTableColumn;
 
-    @javafx.fxml.FXML
-    private TableView<CustomerOrder> orderTableView;
-    @javafx.fxml.FXML
-    private TableColumn<CustomerOrder, String> OrderIDTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<CustomerOrder, String> CustomerNameTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<CustomerOrder, String> TotalAmountTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<CustomerOrder, String> OrderDateTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<CustomerOrder, String> OrderStatusTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<CustomerOrder, String> CarModelTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<CustomerOrder, String> DeliveryDateTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<CustomerOrder, String> PaymentStatusTableColumn;
+    private ToggleGroup orderStatusGroup = new ToggleGroup();
+    private ToggleGroup paymentStatusGroup = new ToggleGroup();
 
-    // Observable list for storing customer orders
-    private ObservableList<CustomerOrder> orderList = FXCollections.observableArrayList();
-
-    @javafx.fxml.FXML
+    // Initialize method to set up ComboBox and RadioButtons
+    @FXML
     public void initialize() {
-        // Initialize ComboBox with car models
-        CarModelComboBox.getItems().addAll("Model A", "Model B", "Model C", "Model D");
+        // Populate ComboBox for Car Models
+        CarModelComboBox.getItems().addAll("Model A", "Model B", "Model C");
 
-        // Set up TableView columns with appropriate cell value factories
-        OrderIDTableColumn.setCellValueFactory(new PropertyValueFactory<>("orderID"));
-        CustomerNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("customerName"));
-        TotalAmountTableColumn.setCellValueFactory(new PropertyValueFactory<>("totalAmount"));
-        OrderDateTableColumn.setCellValueFactory(new PropertyValueFactory<>("orderDate"));
-        OrderStatusTableColumn.setCellValueFactory(new PropertyValueFactory<>("orderStatus"));
-        CarModelTableColumn.setCellValueFactory(new PropertyValueFactory<>("carModel"));
-        DeliveryDateTableColumn.setCellValueFactory(new PropertyValueFactory<>("deliveryDate"));
-        PaymentStatusTableColumn.setCellValueFactory(new PropertyValueFactory<>("paymentStatus"));
+        // Set ToggleGroups for RadioButtons
+        PendingRadioButton.setToggleGroup(orderStatusGroup);
+        DeliveredRadioButton.setToggleGroup(orderStatusGroup);
+        ShippedRadioButton.setToggleGroup(orderStatusGroup);
 
-        // Populate the TableView with the data
-        orderTableView.setItems(orderList);
+        CompletedRadioButton.setToggleGroup(paymentStatusGroup);
+        FailedRadioButton.setToggleGroup(paymentStatusGroup);
+        PendingPaymentRadioButton.setToggleGroup(paymentStatusGroup);
     }
 
-    @javafx.fxml.FXML
-    private void GenerateButtonOnAction() {
-        // Get values from the input fields
+    // Handle the Generate button action
+    @FXML
+    public void GenerateButtonOnAction(MouseEvent event) {
+        // Get values from the form fields
         String orderID = OrderIDTextField.getText();
         String customerName = CustomerNameTextField.getText();
-        String carModel = CarModelComboBox.getValue();
-        String orderStatus = PendingRadioButton.isSelected() ? "Pending" : DeliveredRadioButton.isSelected() ? "Delivered" : "Shipped";
         String totalAmount = TotalAmountTextField.getText();
-        String paymentStatus = CompletedRadioButton.isSelected() ? "Completed" : FailedRadioButton.isSelected() ? "Failed" : "Pending";
-        String orderDate = OrderDateDatePicker.getValue() != null ? OrderDateDatePicker.getValue().toString() : "";
-        String deliveryDate = DeliveryDateDatePicker.getValue() != null ? DeliveryDateDatePicker.getValue().toString() : "";
+        String carModel = CarModelComboBox.getValue();
+        String orderDate = OrderDateDatePicker.getValue().toString();
+        String deliveryDate = DeliveryDateDatePicker.getValue().toString();
+        String orderStatus = getSelectedOrderStatus();
+        String paymentStatus = getSelectedPaymentStatus();
 
-        // Create a new CustomerOrder object with the input data
-        CustomerOrder newOrder = new CustomerOrder(orderID, customerName, carModel, orderStatus, totalAmount, paymentStatus, deliveryDate, orderDate);
+        // Create a new CustomerOrder object and add to TableView
+        CustomerOrder newOrder = new CustomerOrder(orderID, customerName, totalAmount, orderStatus, paymentStatus, carModel, orderDate, deliveryDate);
+        tableView.getItems().add(newOrder);
+    }
 
-        // Add the new order to the orderList
-        orderList.add(newOrder);
+    // Helper method to get selected Order Status
+    private String getSelectedOrderStatus() {
+        if (PendingRadioButton.isSelected()) {
+            return "Pending";
+        } else if (DeliveredRadioButton.isSelected()) {
+            return "Delivered";
+        } else {
+            return "Shipped";
+        }
+    }
 
-        // Clear the input fields
-        OrderIDTextField.clear();
-        CustomerNameTextField.clear();
-        CarModelComboBox.setValue(null);
-        TotalAmountTextField.clear();
-        OrderDateDatePicker.setValue(null);
-        DeliveryDateDatePicker.setValue(null);
-        PendingRadioButton.setSelected(false);
-        DeliveredRadioButton.setSelected(false);
-        ShippedRadioButton.setSelected(false);
-        CompletedRadioButton.setSelected(false);
-        FailedRadioButton.setSelected(false);
-        PendingPaymentRadioButton.setSelected(false);
+    // Helper method to get selected Payment Status
+    private String getSelectedPaymentStatus() {
+        if (CompletedRadioButton.isSelected()) {
+            return "Completed";
+        } else if (FailedRadioButton.isSelected()) {
+            return "Failed";
+        } else {
+            return "Pending";
+        }
     }
 }
